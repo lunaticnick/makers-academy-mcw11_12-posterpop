@@ -4,8 +4,8 @@
   "description": "## User Stories",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "start": "nuxt"
+    "dev": "nuxt",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

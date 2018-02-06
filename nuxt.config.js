@@ -1,3 +1,3 @@
-module.exports = {
-  srcDir: 'pages/'
-}
+// module.exports = {
+//   srcDir: 'pages/'
+// }
