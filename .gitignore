@@ -1,2 +1,7 @@
+# IGNORED FOLDERS
 /node_modules
+
+
+# IGNORED FILES
 .DS_Store
+package-lock.json
