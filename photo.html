@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport"> -->
+
+    <title></title>
+  </head>
+  <body>
+    <div class="page" >
+      <h1>Picture</h1>
+      <video id="player" controls autoplay></video>
+      <button id="capture">Capture</button>
+      <canvas id="canvas" width=340 height=240></canvas>
+    </div>
+    <script>
+
+      const player = document.getElementById('player');
+      const canvas = document.getElementById('canvas');
+      const contex = canvas.getContext('2d');
+      const captureButton = document.getElementById('capture');
+
+      const constraints = {
+        video: true,
+      };
+
+      captureButton.addEventListener('click', () => {
+        contex.drawImage(player, 0, 0, canvas.width, canvas.height);
+      });
+
+      navigator.mediaDevices.getUserMedia(constraints)
+      .then((stream) => {
+        player.srcObject = stream;
+      })
+
+
+    </script>
+
+  </body>
+</html>
