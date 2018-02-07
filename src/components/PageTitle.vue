@@ -1,18 +1,13 @@
 <template>
-  <div>
-    <div class="welcome-message">
-      <h1>{{ msg }}</h1>
-    </div>
-    <div class="capture-photo">
-      <button>capture</button>
-    </div>
+  <div class="page-title">
+    <h1>{{ msg }}</h1>
   </div>
 
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'PageTitle',
   data() {
     return {
       msg: 'Hi!',

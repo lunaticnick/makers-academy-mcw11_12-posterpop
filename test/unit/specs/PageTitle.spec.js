@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld';
+import HelloWorld from '@/components/PageTitle';
 
-describe('HelloWorld.vue', () => {
+describe('PageTitle.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(HelloWorld);
     const vm = new Constructor().$mount();
-    expect(vm.$el.querySelector('.welcome-message h1').textContent)
+    expect(vm.$el.querySelector('.page-title h1').textContent)
       .to.equal('Hi!');
   });
 });

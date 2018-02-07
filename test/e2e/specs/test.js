@@ -11,7 +11,7 @@ module.exports = {
     browser
       .url(devServer)
       .waitForElementVisible('#app', 5000)
-      .assert.elementPresent('.welcome-message')
+      .assert.elementPresent('.page-title')
       .assert.containsText('h1', 'Hi!')
       .assert.elementPresent('.capture-photo')
       .end();

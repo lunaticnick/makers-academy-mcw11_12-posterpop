@@ -1,15 +1,37 @@
 <template>
-  <div class="capture-photo">
-    <h1>{{ msg }}</h1>
-
-  </div>
+<div class="capture-photo">
+  <video id="video" controls autoplay></video>
+  <button id="capture" v-on:click="capture">Capture</button>
+  <canvas id="canvas" width=340 height=240></canvas>
+</div>
 </template>
 
 <script>
 export default {
   name: 'CapturePhoto',
-  data() {
-
-  },
+  methods: {
+    capture: function() {
+      const context = canvas.getContext('2d');
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    }
+  }
 };
+
+
+window.addEventListener("load", function(event) {
+
+  const video = document.getElementById('video');
+  const canvas = document.getElementById('canvas');
+
+  const captureButton = document.getElementById('capture');
+
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({
+      video: true
+    }).then(stream => {
+      video.src = window.URL.createObjectURL(stream);
+      video.play();
+    });
+  }
+})
 </script>
