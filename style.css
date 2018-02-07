@@ -1,0 +1,10 @@
+/* .page{
+  text-align: center;
+  background-color: green;
+} */
+
+@media only screen and (max-width: 800px) {
+   .page {
+       background-color: blue;
+   }
+}
