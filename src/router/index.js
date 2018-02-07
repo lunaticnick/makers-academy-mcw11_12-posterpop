@@ -7,12 +7,10 @@ Vue.use(Router);
 
 export default new Router({
   routes: [{
-      path: '/',
-      components: {
-        pageTitle: PageTitle,
-        capturePhoto: CapturePhoto,
-      },
+    path: '/',
+    components: {
+      pageTitle: PageTitle,
+      capturePhoto: CapturePhoto,
     },
-
-  ],
+  }],
 });
