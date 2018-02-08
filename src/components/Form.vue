@@ -3,7 +3,7 @@
     <div class="form-page" >
       <h1>{{ msg }}</h1>
     </div>
-    <form class="" method="post">
+    <form class="" method="post" v-if="!submitted">
       Text: <input type="text" name="image">
       <button v-on:click.prevent="post">Add Text</button>
     </form>
@@ -18,7 +18,7 @@ export default {
   name: 'FormPage',
   data() {
     return {
-      msg: 'Hi!',
+      msg: 'Hello please submit your form',
       submitted: false,
     };
   },
