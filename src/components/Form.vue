@@ -1,13 +1,16 @@
 <template>
   <div>
-<div class="form-page">
-  <h1>{{ msg }}</h1>
-</div>
-<form class="" method="post">
-  Text: <input type="text" name="image">
-  <button v-on:click.prevent="post">Add Text</button>
-</form>
-</div>
+    <div class="form-page" >
+      <h1>{{ msg }}</h1>
+    </div>
+    <form class="" method="post">
+      Text: <input type="text" name="image">
+      <button v-on:click.prevent="post">Add Text</button>
+    </form>
+    <div v-if='submitted'>
+      <h3> Thank you for submitting the form</h3>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -16,6 +19,7 @@ export default {
   data() {
     return {
       msg: 'Hi!',
+      submitted: false,
     };
   },
   methods: {
@@ -26,6 +30,7 @@ export default {
         userId: 1,
       }).then((data) => {
         console.log(data);
+        this.submitted = true;
       });
     },
   },
