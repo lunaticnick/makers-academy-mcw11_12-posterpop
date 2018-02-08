@@ -25,6 +25,7 @@ window.addEventListener('load', () => {
   if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({
       video: true,
+      facingMode: { exact: "environment"},
     }).then((stream) => {
       video.src = window.URL.createObjectURL(stream);
       video.play();
