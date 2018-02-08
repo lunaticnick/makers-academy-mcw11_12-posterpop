@@ -1,32 +1,34 @@
 <template>
+  <div>
 <div class="form-page">
   <h1>{{ msg }}</h1>
 </div>
-<form class="" action="api_test.html" method="post">
+<form class="" method="post">
   Text: <input type="text" name="image">
   <button v-on:click.prevent="post">Add Text</button>
 </form>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'Form',
+  name: 'FormPage',
   data() {
     return {
       msg: 'Hi!',
     };
   },
   methods: {
-    post: function(){
-      this.$http.post("http://jsonplaceholder.typicode.com/posts", {
+    post() {
+      this.$http.post('http://jsonplaceholder.typicode.com/posts', {
         title: this.name,
-        body: "test",
-        userId: 1
-      }).then(function(data){
+        body: 'test',
+        userId: 1,
+      }).then((data) => {
         console.log(data);
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
