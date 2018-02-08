@@ -1,7 +1,9 @@
 <template>
 <div class="capture-photo">
   <video id="video" controls autoplay></video>
-  <button id="capture" v-on:click="capture">Capture</button>
+  <router-link to="/photo">
+    <button id="capture" name="captureBtn" v-on:click="capture">Capture</button>
+  </router-link>
   <canvas id="canvas" width=340 height=240></canvas>
 </div>
 </template>
