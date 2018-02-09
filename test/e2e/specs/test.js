@@ -21,4 +21,15 @@ module.exports = {
       .assert.urlEquals(devServer + '/#/photo')
       .end();
   },
+
+  'navigation bar test': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .assert.elementPresent('.home')
+      .assert.containsText('.nav-item', 'Title')
+      .end();
+  },
 };

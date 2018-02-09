@@ -2,9 +2,11 @@
 <div id="app">
     <router-view class="header"></router-view>
 
-    <router-view class="view-title" name="pageTitle"></router-view>
+    <router-view name="home"></router-view>
 
-    <router-view class="view-button" name="capturePhoto"></router-view>
+    <router-view name="pageTitle"></router-view>
+
+    <router-view name="capturePhoto"></router-view>
 </div>
 </template>
 
