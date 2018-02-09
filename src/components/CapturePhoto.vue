@@ -1,10 +1,17 @@
 <template>
 <div class="capture-photo">
-  <video id="video" controls autoplay></video>
-  <router-link to="/photo">
-    <button id="capture" name="captureBtn" v-on:click="capture">Capture</button>
-  </router-link>
-  <canvas id="canvas" width=340 height=240></canvas>
+
+<input
+      type="file"
+      accept="image/*"
+      capture="environment"
+      @change="onImageCaptured($event.target.name, $event.target.files)">
+
+<div v-if="imgURL">
+    <img v-bind:src="imgURL"  style="width:200px">
+
+    <button v-on:click.prevent="post">Send Image</button>
+  </div>
 </div>
 </template>
 

@@ -11,18 +11,7 @@ module.exports = {
       .end();
   },
 
-  'capture photo redirection test': function test(browser) {
-    const devServer = browser.globals.devServerURL;
-
-    browser
-      .url(devServer)
-      .waitForElementVisible('#app', 5000)
-      .click('button[name=captureBtn]')
-      .assert.urlEquals(devServer + '/#/photo')
-      .end();
-  },
-
-  'navigation bar test': function test(browser) {
+  'navigation bar title test': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
