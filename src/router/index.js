@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import PageTitle from '@/components/PageTitle';
 import CapturePhoto from '@/components/CapturePhoto';
+import Form from '@/components/Form';
 
 Vue.use(Router);
 
@@ -19,6 +20,12 @@ export default new Router({
       path: '/photo',
       components: {
         pageTitle: PageTitle,
+      }
+    },
+    {
+      path: '/about_us',
+      components: {
+        home: Home,
       }
     },
   ],

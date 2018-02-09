@@ -1,7 +1,8 @@
 <template>
   <div class='home'>
     <b-nav>
-      <b-nav-item>{{ message }}</b-nav-item>
+      <b-nav-item>{{ title }}</b-nav-item>
+      <b-nav-item to="/about_us" id="infoId">{{ info }}</b-nav-item>
     </b-nav>
   </div>
 </template>
@@ -10,7 +11,8 @@
     name: 'Home',
     data() {
       return {
-        message: 'Title',
+        title: 'Title',
+        info: 'About Us'
       };
     },
   };
