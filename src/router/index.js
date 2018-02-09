@@ -21,5 +21,11 @@ export default new Router({
         pageTitle: PageTitle,
       }
     },
+    {
+      path: '/about_us',
+      components: {
+        home: Home,
+      }
+    },
   ],
 });
