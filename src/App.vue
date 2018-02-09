@@ -4,6 +4,8 @@
   <router-view class="view-title" name="pageTitle"></router-view>
   <router-view class="view-button" name="capturePhoto"></router-view>
   <router-view class="form-page" name="formPage"></router-view>
+  <router-view class="upload-image" name="uploadImage"></router-view>
+  <router-view class="showing-post" name="showPost"></router-view>
 
 </div>
 </template>
