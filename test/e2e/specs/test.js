@@ -87,4 +87,15 @@ module.exports = {
     .assert.elementPresent('#logInButt')
     .end();
   },
+
+  'Sign-up form redirection test' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .click('#signUpButton')
+    .assert.urlEquals(devServer + '/#/sign_up')
+    .end();
+  },
 };

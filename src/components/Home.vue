@@ -4,6 +4,7 @@
       <b-nav-item>{{ title }}</b-nav-item>
       <b-nav-item to="/about_us" id="infoId">{{ info }}</b-nav-item>
       <b-button id="signUpButton">Sign Up</b-button>
+      <b-button id="logInButt">Log In</b-button>
     </b-nav>
   </div>
 </template>
