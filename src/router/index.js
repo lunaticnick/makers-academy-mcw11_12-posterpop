@@ -4,6 +4,7 @@ import Home from '@/components/Home';
 import PageTitle from '@/components/PageTitle';
 import CapturePhoto from '@/components/CapturePhoto';
 import Form from '@/components/Form';
+import SignUp from '@/components/SignUp'
 
 Vue.use(Router);
 
@@ -14,6 +15,7 @@ export default new Router({
         home: Home,
         pageTitle: PageTitle,
         capturePhoto: CapturePhoto,
+        signUp: SignUp,
       },
     },
     {
