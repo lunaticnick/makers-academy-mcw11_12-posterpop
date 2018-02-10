@@ -43,4 +43,16 @@ module.exports = {
       .assert.urlEquals(devServer + '/#/about_us')
       .end();
   },
+
+  'Show the choose file button': function test(browser) {
+  const devServer = browser.globals.devServerURL;
+
+  browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .assert.elementPresent('.capture-photo')
+    .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
+    .end();
+
+  },
 };

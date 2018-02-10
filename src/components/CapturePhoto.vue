@@ -1,7 +1,7 @@
 <template>
 <div class="capture-photo">
 
-<input
+<input id="chooseFile"
       type="file"
       accept="image/*"
       capture="environment"
