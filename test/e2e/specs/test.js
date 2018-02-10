@@ -78,4 +78,13 @@ module.exports = {
       .assert.elementPresent('#signUpButton')
       .end();
   },
+  'Shows the "Log in" button' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .assert.elementPresent('#logInButt')
+    .end();
+  },
 };
