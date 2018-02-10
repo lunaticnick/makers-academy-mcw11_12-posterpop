@@ -17,12 +17,6 @@ export default new Router({
       },
     },
     {
-      path: '/photo',
-      components: {
-        pageTitle: PageTitle,
-      }
-    },
-    {
       path: '/about_us',
       components: {
         home: Home,
