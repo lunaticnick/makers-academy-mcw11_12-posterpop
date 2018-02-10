@@ -7,8 +7,11 @@
       capture="environment"
       @change="onImageCaptured($event.target.name, $event.target.files)">
 
-    <img v-bind:src="imgURL" v-if="imgURL" style="width:200px">
-    <button v-on:click.prevent="post">Send Image</button>
+      <div v-if="imgURL">
+        <img v-bind:src="imgURL"  style="width:200px">
+        <button v-on:click.prevent="post">Send Image</button>
+      </div>
+  
 </div>
 </template>
 
