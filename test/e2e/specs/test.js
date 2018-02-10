@@ -109,4 +109,14 @@ module.exports = {
     .assert.elementPresent(".signUpForm")
     .end();
   },
+
+  'Shows the "Log out" button' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .assert.elementPresent('#logOutButton')
+    .end();
+  },
 };
