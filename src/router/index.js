@@ -15,13 +15,18 @@ export default new Router({
         home: Home,
         pageTitle: PageTitle,
         capturePhoto: CapturePhoto,
-        signUp: SignUp,
       },
     },
     {
       path: '/about_us',
       components: {
         home: Home,
+      }
+    },
+    {
+      path: '/sign_up',
+      components: {
+        signUp: SignUp,
       }
     },
   ],
