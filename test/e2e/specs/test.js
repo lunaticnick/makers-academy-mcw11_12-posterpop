@@ -68,4 +68,55 @@ module.exports = {
       .assert.elementPresent('#sendImage')
       .end();
   },
+
+  'Shows the "Sign up" button' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .assert.elementPresent('#signUpButton')
+      .end();
+  },
+  'Shows the "Log in" button' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .assert.elementPresent('#logInButt')
+    .end();
+  },
+
+  'Sign-up form redirection test' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .click('#signUpButton')
+    .assert.urlEquals(devServer + '/#/sign_up')
+    .end();
+  },
+
+  'Shows a form to fill in on the SignUp page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .click('#signUpButton')
+    .assert.elementPresent(".signUpForm")
+    .end();
+  },
+
+  'Shows the "Log out" button' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .assert.elementPresent('#logOutButton')
+    .end();
+  },
 };
