@@ -44,7 +44,7 @@ module.exports = {
       .end();
   },
 
-  'Show the choose file button': function test(browser) {
+  'Shows the choose file button': function test(browser) {
   const devServer = browser.globals.devServerURL;
 
   browser
@@ -54,5 +54,18 @@ module.exports = {
     .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
     .end();
 
+  },
+
+  'Shows the "Send image" button' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .click('input[id="chooseFile"]')
+      .setValue('input[type="file"]', require('path').resolve('https://i.imgur.com/xo03IMi.jpg'))
+      .assert.elementPresent('.capture-photo')
+      .assert.elementPresent('#sendImage')
+      .end();
   },
 };
