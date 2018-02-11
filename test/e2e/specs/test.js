@@ -130,7 +130,7 @@ module.exports = {
     .end();
   },
 
-  'Shows a sign in form on the SignIp page': function test(browser) {
+  'Shows a sign in form on the SignIn page': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -151,6 +151,18 @@ module.exports = {
     .end();
   },
 
+  'Shows a sign up form on the signUp page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-
+    browser
+    .url(devServer + '/#/sign_up')
+    .waitForElementVisible('#app', 5000)
+    .assert.elementPresent('#firstName')
+    .assert.elementPresent('#lastName')
+    .assert.elementPresent('#username')
+    .assert.elementPresent('#email')
+    .assert.elementPresent('#password')
+    .assert.elementPresent('#password_confirmation')
+    .end();
+  },
 };
