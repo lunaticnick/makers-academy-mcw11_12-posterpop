@@ -129,4 +129,15 @@ module.exports = {
     .assert.elementPresent('.signInForm')
     .end();
   },
+
+  'Shows a sign in form on the SignIp page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer + '/#/sign_in')
+    .waitForElementVisible('#app', 5000)
+    .assert.containsText('input:nth-of-type(1)', 'Email')
+    .assert.containsText('input:nth-of-type(2)', 'Password')
+    .end();
+  },
 };
