@@ -176,4 +176,15 @@ module.exports = {
     .assert.urlEquals(devServer + '/#/sign_up')
     .end();
   },
+
+  'Redirects from sign up page to sign in page' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer + '/#/sign_in')
+    .waitForElementVisible('#app', 5000)
+    .click('#signUpHyperlink')
+    .assert.urlEquals(devServer + '/#/sign_up')
+    .end();
+  },
 };

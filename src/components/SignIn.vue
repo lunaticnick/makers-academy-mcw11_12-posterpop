@@ -5,7 +5,7 @@
       Email:    <input type="text" id="email"><br>
       Password: <input type="password" id="password"><br>
       <button>Sign In</button>
-      <p>You don't have an account yet, please create one.</p>
+      <p>You don't have an account yet, please create <router-link id="signUpHyperlink" to="sign_up">one.</router-link></p>
     </form>
   </div>
 </template>
