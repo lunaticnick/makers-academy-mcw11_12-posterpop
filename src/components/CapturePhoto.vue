@@ -1,15 +1,15 @@
 <template>
 <div class="capture-photo">
 
-<input
+<input id="chooseFile"
       type="file"
       accept="image/*"
       capture="environment"
       @change="onImageCaptured($event.target.name, $event.target.files)">
 
-      <div v-if="imgURL">
+      <div v-show="imgURL">
         <img v-bind:src="imgURL"  style="width:200px">
-        <button v-on:click.prevent="post">Send Image</button>
+        <button id="sendImage" v-on:click.prevent="post">Send Image</button>
       </div>
 
 </div>
