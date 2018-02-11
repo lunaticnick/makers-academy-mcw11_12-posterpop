@@ -99,17 +99,6 @@ module.exports = {
     .end();
   },
 
-  // 'Shows a form to fill in on the SignUp page': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //   .url(devServer)
-  //   .waitForElementVisible('#app', 5000)
-  //   .click('#signUpButton')
-  //   .assert.elementPresent(".signUpForm")
-  //   .end();
-  // },
-
   'Shows the "Log out" button' : function test(browser) {
     const devServer = browser.globals.devServerURL;
 
