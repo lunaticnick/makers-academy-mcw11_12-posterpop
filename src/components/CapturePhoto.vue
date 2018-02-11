@@ -71,7 +71,7 @@ export default {
         this.element.shift();
 
         for(var i = 0; i < this.element.length; i ++){
-          if (this.element[i].description.includes(".uk")){
+          if (this.element[i].description.toLowerCase().includes(".uk") || this.element[i].description.toLowerCase().includes(".com")){
             this.urlLink = "http://" + this.element[i].description;
           };
         };
