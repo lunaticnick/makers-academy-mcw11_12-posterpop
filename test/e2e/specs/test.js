@@ -176,4 +176,15 @@ module.exports = {
     .assert.urlEquals(devServer + '/#/sign_in')
     .end();
   },
+
+  'Redirects from to homepage following sign in' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer + '/#/sign_in')
+    .waitForElementVisible('#app', 5000)
+    .click('#signInButton')
+    .assert.urlEquals(devServer)
+    .end();
+  },
 };
