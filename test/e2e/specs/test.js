@@ -170,10 +170,10 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-    .url(devServer + '/#/sign_in')
+    .url(devServer + '/#/sign_up')
     .waitForElementVisible('#app', 5000)
-    .click('#signUpHyperlink')
-    .assert.urlEquals(devServer + '/#/sign_up')
+    .click('#signInHyperlink')
+    .assert.urlEquals(devServer + '/#/sign_in')
     .end();
   },
 };
