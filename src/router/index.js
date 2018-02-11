@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import CapturePhoto from '@/components/CapturePhoto';
 import Form from '@/components/Form';
 import SignUp from '@/components/SignUp'
+import SignIn from '@/components/SignIn'
 
 Vue.use(Router);
 
@@ -27,6 +28,12 @@ export default new Router({
       path: '/sign_up',
       components: {
         signUp: SignUp,
+      }
+    },
+    {
+      path: '/sign_in',
+      components: {
+        signIn: SignIn,
       }
     },
   ],

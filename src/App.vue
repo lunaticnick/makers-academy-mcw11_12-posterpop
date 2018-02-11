@@ -7,7 +7,9 @@
     <router-view name="pageTitle"></router-view>
 
     <router-view name="capturePhoto"></router-view>
+
     <router-view name="signUp"></router-view>
+    <router-view name="signIn"></router-view>
 </div>
 </template>
 
