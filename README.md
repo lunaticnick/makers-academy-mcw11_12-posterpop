@@ -26,8 +26,32 @@ I want to be redirected to the event's official website.
 
 ```
 As a User,
-So that I can remember what I have booked,
-I want to be able to have the option to add the event to my calendar.
+So I can use the features of the app,
+I want to be able to upload a photo of a poster.
+```
+
+```
+As a User,
+So that I can use the features of the app,
+I want to be able to sign up.
+```
+
+```
+As a User,
+So that I can see the events that I have expressed an interest in,
+I want to be able to log in to the app.
+```
+
+```
+As a User,
+So that I can see my researched events,
+I want to see a list of my links when I log in.
+```
+
+```
+As a User,
+To protect the details of my account
+I want to be able to log out of the app.
 ```
 
 ```
@@ -36,18 +60,18 @@ So that I can remember events I may be interested in,
 I want the app to send me a reminder to book.
 ```
 
-```
-As a User,
-So that I can be reminded to attend an event that I have booked,
-I want to be able to choose a notification time frame.
-```
-
 Extra Features
 
 ```
 As a User,
-So I can use the features of the app,
-I want to be able to upload a photo of a poster.
+So that I can remember what I have booked,
+I want to be able to have the option to add the event to my calendar.
+```
+
+```
+As a User,
+So that I can be reminded to attend an event that I have booked,
+I want to be able to choose a notification time frame.
 ```
 
 ```
