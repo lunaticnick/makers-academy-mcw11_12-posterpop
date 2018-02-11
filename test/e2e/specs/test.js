@@ -136,8 +136,10 @@ module.exports = {
     browser
     .url(devServer + '/#/sign_in')
     .waitForElementVisible('#app', 5000)
-    .assert.containsText('input:nth-of-type(1)', 'Email')
-    .assert.containsText('input:nth-of-type(2)', 'Password')
+    .assert.elementPresent('#email')
+    .assert.elementPresent('#password')
     .end();
   },
+
+  
 };
