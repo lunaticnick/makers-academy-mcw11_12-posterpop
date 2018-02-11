@@ -165,4 +165,15 @@ module.exports = {
     .assert.elementPresent('#password_confirmation')
     .end();
   },
+
+  'Redirects from sign in page to sign up page' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer + '/#/sign_in')
+    .waitForElementVisible('#app', 5000)
+    .click('#signUpHyperlink')
+    .assert.urlEquals(devServer + '/#/sign_up')
+    .end();
+  },
 };
