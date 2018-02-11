@@ -13,7 +13,7 @@
 
         <a v-bind:href="urlLink">{{ urlLink }}</a>
 
-        
+
       </div>
 
 </div>
@@ -72,7 +72,7 @@ export default {
 
         for(var i = 0; i < this.element.length; i ++){
           if (this.element[i].description.includes(".uk")){
-            this.urlLink = this.element[i].description;
+            this.urlLink = "http://" + this.element[i].description;
           };
         };
 
