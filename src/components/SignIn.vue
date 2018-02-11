@@ -4,7 +4,7 @@
       <h3>Sign In</h3>
       Email:    <input type="text" id="email"><br>
       Password: <input type="password" id="password"><br>
-      <button>Sign In</button>
+      <button v-on:click="signIn" id="signInButton">Sign In</button>
       <p>You don't have an account yet, please create <router-link id="signUpHyperlink" to="sign_up">one.</router-link></p>
     </form>
   </div>
@@ -16,7 +16,11 @@ export default {
   data: function() {
     return {}
   },
-  methods: {}
+  methods: {
+    signIn: function() {
+      this.$router.replace('home')
+    }
+  }
 }
 </script>
 

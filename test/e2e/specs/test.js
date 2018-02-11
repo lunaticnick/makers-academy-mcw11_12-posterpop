@@ -3,7 +3,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-      .url(devServer)
+      .url(devServer + "/#/home")
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('.page-title')
       .assert.containsText('h1', 'Hi!')
@@ -15,7 +15,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-      .url(devServer)
+      .url(devServer + "/#/home")
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('.home')
       .assert.containsText('.nav-item', 'Title')
@@ -26,7 +26,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-      .url(devServer)
+      .url(devServer + "/#/home")
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('.home')
       .assert.containsText('li:nth-of-type(2)', 'About Us')
@@ -37,7 +37,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-      .url(devServer)
+      .url(devServer + "/#/home")
       .waitForElementVisible('#app', 5000)
       .click("#infoId")
       .assert.urlEquals(devServer + '/#/about_us')
@@ -48,7 +48,7 @@ module.exports = {
   const devServer = browser.globals.devServerURL;
 
   browser
-    .url(devServer)
+    .url(devServer + "/#/home")
     .waitForElementVisible('#app', 5000)
     .assert.elementPresent('.capture-photo')
     .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
@@ -60,7 +60,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-      .url(devServer)
+      .url(devServer + "/#/home")
       .waitForElementVisible('#app', 5000)
       .click('input[id="chooseFile"]')
       .setValue('input[type="file"]', require('path').resolve('https://i.imgur.com/xo03IMi.jpg'))
@@ -73,7 +73,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-      .url(devServer)
+      .url(devServer + "/#/home")
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('#signUpButton')
       .end();
@@ -82,7 +82,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-    .url(devServer)
+    .url(devServer + "/#/home")
     .waitForElementVisible('#app', 5000)
     .assert.elementPresent('#logInButt')
     .end();
@@ -92,7 +92,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-    .url(devServer)
+    .url(devServer + "/#/home")
     .waitForElementVisible('#app', 5000)
     .click('#signUpButton')
     .assert.urlEquals(devServer + '/#/sign_up')
@@ -103,7 +103,7 @@ module.exports = {
     const devServer = browser.globals.devServerURL;
 
     browser
-    .url(devServer)
+    .url(devServer + "/#/home")
     .waitForElementVisible('#app', 5000)
     .assert.elementPresent('#logOutButton')
     .end();
@@ -184,7 +184,7 @@ module.exports = {
     .url(devServer + '/#/sign_in')
     .waitForElementVisible('#app', 5000)
     .click('#signInButton')
-    .assert.urlEquals(devServer)
+    .assert.urlEquals(devServer + "/?#/home")
     .end();
   },
 };
