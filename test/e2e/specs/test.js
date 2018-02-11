@@ -119,4 +119,15 @@ module.exports = {
     .assert.elementPresent('#logOutButton')
     .end();
   },
+  
+  'Shows the "Sign in" page' : function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer + '/#/sign_in')
+    .waitForElementVisible('#app', 5000)
+    .assert.elementPresent('.signInForm')
+    .end();
+  },
+
 };
