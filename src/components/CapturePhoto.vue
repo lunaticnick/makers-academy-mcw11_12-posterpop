@@ -57,13 +57,22 @@ export default {
             features:[
               {
                 type:"TEXT_DETECTION",
-                maxResults:10,
               }
             ]
           }
         ]
-      }).then((data) => {
-        console.log(data);
+      }).then((dataApi) => {
+        console.log(dataApi);
+        this.element = dataApi.body.responses[0].textAnnotations;
+        this.element.shift();
+
+        for(var i = 0; i < this.element.length; i ++){
+          if (this.element[i].description.includes(".uk")){
+            console.log(this.element[i].description)
+          };
+        };
+
+
       });
     },
   },
