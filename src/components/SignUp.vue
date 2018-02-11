@@ -10,7 +10,7 @@
       Password Confirmation: <input type="text" id="password_confirmation">
     </form>
     <button>Sign Up</button>
-    <span>or go back to login.</span>
+    <span>or go back to <router-link id="signInHyperlink" to="/sign_in">login</router-link></span>
   </div>
 
 </template>
