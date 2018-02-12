@@ -12,15 +12,28 @@
 
 <script>
 
+import firebase from 'firebase'
+
 export default {
-  name: 'signInForm',
-  data: function() {
-    return {}
-  },
-  methods: {
-    signIn: function () {
-    }
-  }
+ name: 'signInForm',
+ data: function() {
+   return {
+     email: '',
+     password: ''
+   }
+ },
+ methods: {
+   signIn: function() {
+     firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+       function (user) {
+         alert('You are logged in.')
+       },
+       function (err) {
+         alert(err.message)
+       }
+     );
+   }
+ }
 }
 </script>
 
