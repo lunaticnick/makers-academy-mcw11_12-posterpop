@@ -1,16 +1,19 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+
 import Home from '@/components/Home';
 import PageTitle from '@/components/PageTitle';
 import CapturePhoto from '@/components/CapturePhoto';
 import Form from '@/components/Form';
 import SignUp from '@/components/SignUp'
 import SignIn from '@/components/SignIn'
+import firebase from 'firebase'
 
 Vue.use(Router);
 
-export default new Router({
-  routes: [{
+let router = new Router({
+  routes: [
+    {
       path: '*',
       redirect: '/sign_in'
     },
@@ -34,6 +37,9 @@ export default new Router({
       components: {
         home: Home,
       },
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/sign_up',
@@ -49,3 +55,13 @@ export default new Router({
     },
   ],
 });
+
+router.beforeEach((to, from, next) => {
+  let currentUser = firebase.auth().currentUser;
+  let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+  if(requiresAuth && !currentUser) next('sign_in')
+  else if (!requiresAuth && currentUser) next('home')
+  else next()
+})
+export default router
