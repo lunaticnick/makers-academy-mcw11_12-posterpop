@@ -11,18 +11,29 @@ Vue.use(Router);
 
 export default new Router({
   routes: [{
+      path: '*',
+      redirect: '/sign_in'
+    },
+    {
+      path: '/',
+      redirect: '/sign_in'
+    },
+    {
       path: '/home',
       components: {
         home: Home,
         pageTitle: PageTitle,
         capturePhoto: CapturePhoto,
       },
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/about_us',
       components: {
         home: Home,
-      }
+      },
     },
     {
       path: '/sign_up',
