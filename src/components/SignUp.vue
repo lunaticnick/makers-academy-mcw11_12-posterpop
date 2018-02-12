@@ -2,26 +2,38 @@
   <div class="">
     <form class="signUpForm">
       <p>Please create a new account below</p>
-      First Name:            <input type="text" id="firstName">
-      Last Name:             <input type="text" id="lastName">
-      Username:              <input type="text" id="username">
-      Email:                 <input type="text" id="email">
-      Password:              <input type="text" id="password">
-      Password Confirmation: <input type="text" id="password_confirmation">
+      Email:                 <input type="text" v-model="email" id="email">
+      Password:              <input type="password" v-model="password" id="password">
     </form>
-    <button>Sign Up</button>
+    <button v-on:click="signUp">Sign Up</button>
     <span>or go back to <router-link id="signInHyperlink" to="/sign_in">login</router-link></span>
   </div>
 
 </template>
-a
+
 <script>
+import firebase from 'firebase'
+
 export default {
-  name: 'signUpForm',
+  name: 'signUp',
   data: function() {
-    return {}
+    return {
+      email: '',
+      password: ''
+    }
   },
-  methods: {}
+  methods: {
+    signUp: function () {
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
+        function (user) {
+          alert('Your account has successfully been created.')
+        },
+        function (err) {
+          alert(err.message)
+        }
+      );
+    }
+  }
 }
 </script>
 

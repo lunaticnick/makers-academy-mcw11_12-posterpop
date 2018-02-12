@@ -2,8 +2,8 @@
   <div>
     <form class="signInForm">
       <h3>Sign In</h3>
-      Email:    <input type="text" id="email"><br>
-      Password: <input type="password" id="password"><br>
+      Email:    <input type="text" v-model="email" id="email"><br>
+      Password: <input type="password" v-model="password" id="password"><br>
       <button v-on:click="signIn" id="signInButton">Sign In</button>
       <p>You don't have an account yet, please create <router-link id="signUpHyperlink" to="sign_up">one.</router-link></p>
     </form>
@@ -11,14 +11,14 @@
 </template>
 
 <script>
+
 export default {
   name: 'signInForm',
   data: function() {
     return {}
   },
   methods: {
-    signIn: function() {
-      this.$router.replace('home')
+    signIn: function () {
     }
   }
 }
