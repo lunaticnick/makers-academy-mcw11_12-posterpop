@@ -11,7 +11,9 @@
         <img v-bind:src="imgURL"  style="width:200px">
         <button id="sendImage" v-on:click.prevent="post">Send Image</button>
 
-        <a id="extractedLink" v-bind:href="urlLink">{{ urlLink }}</a>
+      <div id="extractedLink" v-on:click="urlLink">
+        <a id="extractedLinkButton" v-bind:href="urlLink">{{ urlLink }}</a>
+      </div>
 
 
       </div>
