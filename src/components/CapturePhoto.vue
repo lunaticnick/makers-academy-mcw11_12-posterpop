@@ -11,7 +11,7 @@
         <img v-bind:src="imgURL"  style="width:200px">
         <button id="sendImage" v-on:click.prevent="post">Send Image</button>
 
-        <a v-bind:href="urlLink">{{ urlLink }}</a>
+        <a id="extrapolatedLink" v-bind:href="urlLink">{{ urlLink }}</a>
 
 
       </div>
@@ -71,7 +71,7 @@ export default {
         this.element.shift();
 
         for(var i = 0; i < this.element.length; i ++){
-          if (this.element[i].description.includes(".uk")){
+          if (this.element[i].description.toLowerCase().includes(".uk") || this.element[i].description.toLowerCase().includes(".com")){
             this.urlLink = "http://" + this.element[i].description;
           };
         };
