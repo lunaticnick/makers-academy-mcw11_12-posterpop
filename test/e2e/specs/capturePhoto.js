@@ -1,5 +1,5 @@
 module.exports = {
-  'Shows The extracted url ".uk" link': function test(browser) {
+  'Shows the extracted url ".uk" link': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -12,7 +12,7 @@ module.exports = {
       .end();
   },
 
-  'Shows The extracted url ".com" link': function test(browser) {
+  'Shows the extracted url ".com" link': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -22,6 +22,22 @@ module.exports = {
       .setValue('input[type="file"]', require('path').resolve('http://www.coolture.pt/wp-content/uploads/2017/10/nos-alive-18-3.jpg'))
       .click("#sendImage")
       .assert.elementPresent('#extractedLink', 'http://nosalive.com')
+      .end();
+  },
+
+  'Redirect the extracted url to the actual website': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .click('input[id="chooseFile"]')
+      .setValue('input[type="file"]', require('path').resolve('http://www.coolture.pt/wp-content/uploads/2017/10/nos-alive-18-3.jpg'))
+      .click("#sendImage")
+      .assert.elementPresent('#extractedLink', 'http://nosalive.com')
+      .assert.elementPresent("#extractedLinkButton")
+      .click('#extractedLink')
+      .assert.urlEquals('http://nosalive.com')
       .end();
   },
 
