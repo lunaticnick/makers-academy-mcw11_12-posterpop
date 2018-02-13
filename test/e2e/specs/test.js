@@ -71,19 +71,22 @@ module.exports = {
       .assert.urlEquals(devServer + '/#/about_us')
       .end();
   },
-  //
-  // 'Shows the choose file button': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('.capture-photo')
-  //     .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
-  //     .end();
-  //
-  // },
-  //
+
+  'Shows the choose file button on the home page when logged in': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('.capture-photo', 5000)
+      .assert.elementPresent('.capture-photo')
+      .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
+      .end();
+  },
+
   // 'Shows the "Send image" button': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
   //
