@@ -52,7 +52,7 @@ let router = new Router({
     },
   ],
 });
-// 
+
 // router.beforeEach((to, from, next) => {
 //   let currentUser = firebase.auth().currentUser;
 //   let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
