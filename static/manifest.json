@@ -6,7 +6,7 @@
   "display": "minimal-ui",
   "orientation": "portrait",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": "https://meventoapp.firebaseapp.com/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
