@@ -87,18 +87,23 @@ module.exports = {
       .end();
   },
 
-  // 'Shows the "Send image" button': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .click('input[id="chooseFile"]')
-  //     .setValue('input[type="file"]', require('path').resolve('https://i.imgur.com/xo03IMi.jpg'))
-  //     .assert.elementPresent('.capture-photo')
-  //     .assert.elementPresent('#sendImage')
-  //     .end();
-  // },
+  'Shows the "Send image" button': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .setValue('input[type="text"]', 'example@test.com')
+    .setValue('input[type="password"]', '123456')
+    .click('#signInButton')
+    .waitForElementVisible('.capture-photo', 5000)
+    .assert.elementPresent('.capture-photo')
+    .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
+    .setValue('input[type="file"]', require('path').resolve('https://i.imgur.com/xo03IMi.jpg'))
+    .assert.elementPresent('.capture-photo')
+    .assert.elementPresent('#sendImage')
+    .end();
+  },
   //
   // 'Shows the "Sign up" button': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
