@@ -19,7 +19,7 @@ export default {
   data: function() {
     return {
       email: '',
-      password: ''
+      password: '',
     }
   },
   methods: {
