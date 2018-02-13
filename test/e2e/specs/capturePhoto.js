@@ -34,11 +34,12 @@ module.exports = {
       .click('input[id="chooseFile"]')
       .setValue('input[type="file"]', require('path').resolve('http://www.coolture.pt/wp-content/uploads/2017/10/nos-alive-18-3.jpg'))
       .click("#sendImage")
+      .pause(1000)
       .assert.elementPresent('#extractedLink', 'http://nosalive.com')
-      .assert.elementPresent("#extractedLinkButton")
-      .click('#extractedLink')
-      .assert.urlEquals('http://nosalive.com')
-      .end();
+      .click("#extractedLink", function(result) {
+        console.log("button clicked")
+      })
+    .end();
   },
 
 };
