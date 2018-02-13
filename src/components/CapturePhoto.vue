@@ -7,12 +7,17 @@
       capture="environment"
       @change="onImageCaptured($event.target.name, $event.target.files)">
 
+      <div class="testing">
+        <h1>testing</h1>
+      </div>
+
       <div v-show="imgURL">
         <img v-bind:src="imgURL"  style="width:200px">
         <button id="sendImage" v-on:click.prevent="post">Send Image</button>
 
+
       <button id="extractedLinkButton" v-show="urlLink">
-        <a id="extractedLink" v-bind:href="urlLink">{{ urlLink }}</a>
+        <a name="linkExtraction" id="extractedLink" v-bind:href="urlLink">{{ urlLink }}</a>
       </button>
 
 
