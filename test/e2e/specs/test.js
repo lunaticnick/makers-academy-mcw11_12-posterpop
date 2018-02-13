@@ -2,7 +2,6 @@ module.exports = {
   'User is redirected to home page after sign in': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
-
     browser
       .url(devServer)
       .waitForElementVisible('#app', 5000)
@@ -23,23 +22,27 @@ module.exports = {
       .setValue('input[type="text"]', 'example@test.com')
       .setValue('input[type="password"]', '123456')
       .click('#signInButton')
-      .waitForElementVisible('.homeMessage', 5000)
+      .waitForElementVisible('.home', 5000)
       .assert.elementPresent('.home')
       .assert.containsText('.nav-item', 'mEVENTo')
       .end();
   },
-  //
-  // 'navigation bar about us test': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('.home')
-  //     .assert.containsText('li:nth-of-type(2)', 'About Us')
-  //     .end();
-  // },
-  //
+
+  'User is able to view the About Us link in the navigation bar': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('.home', 5000)
+      .assert.elementPresent('.home')
+      .assert.containsText('li:nth-of-type(2)', 'About Us')
+      .end();
+  },
+
   // 'navigation bar about us redirection test': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
   //
