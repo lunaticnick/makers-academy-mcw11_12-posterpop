@@ -5,7 +5,7 @@
       Email:                 <input type="text" v-model="email" id="email">
       Password:              <input type="password" v-model="password" id="password">
     </form>
-    <button v-on:click="signUp">Sign Up</button>
+    <button v-on:click="signUp" id="signUpButton">Sign Up</button>
     <span>or go back to <router-link id="signInHyperlink" to="/sign_in">login</router-link></span>
   </div>
 
