@@ -6,10 +6,12 @@
       <b-button to="/sign_up" id="signUpButton">Sign Up</b-button>
       <b-button id="logInButt">Log In</b-button>
       <b-button id="logOutButton">Log Out</b-button>
+
     </b-nav>
   </div>
 </template>
 <script>
+
   export default {
     name: 'Home',
     data() {
@@ -18,5 +20,7 @@
         info: 'About Us'
       };
     },
+
   };
+
 </script>
