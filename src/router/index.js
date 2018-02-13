@@ -37,9 +37,6 @@ let router = new Router({
       components: {
         home: Home,
       },
-      meta: {
-        requiresAuth: true
-      }
     },
     {
       path: '/sign_up',
