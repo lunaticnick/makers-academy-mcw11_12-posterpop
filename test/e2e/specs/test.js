@@ -1,5 +1,5 @@
 module.exports = {
-  'user is redirected to home page after sign in': function test(browser) {
+  'User is redirected to home page after sign in': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
 
@@ -14,16 +14,20 @@ module.exports = {
       .end();
   },
 
-  // 'navigation bar title test': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('.home')
-  //     .assert.containsText('.nav-item', 'Title')
-  //     .end();
-  // },
+  'User is able to view the name of the app in the navigation bar': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('.homeMessage', 5000)
+      .assert.elementPresent('.home')
+      .assert.containsText('.nav-item', 'mEVENTo')
+      .end();
+  },
   //
   // 'navigation bar about us test': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
