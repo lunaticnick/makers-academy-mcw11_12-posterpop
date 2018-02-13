@@ -11,3 +11,4 @@ module.exports = {
       .assert.elementPresent('#extrapolatedLink', 'https')
       .end();
   },
+};

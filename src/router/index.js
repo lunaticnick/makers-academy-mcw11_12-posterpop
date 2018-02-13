@@ -28,9 +28,9 @@ let router = new Router({
         pageTitle: PageTitle,
         capturePhoto: CapturePhoto,
       },
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     {
       path: '/about_us',
@@ -52,13 +52,13 @@ let router = new Router({
     },
   ],
 });
-
-router.beforeEach((to, from, next) => {
-  let currentUser = firebase.auth().currentUser;
-  let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-
-  if(requiresAuth && !currentUser) next('sign_in')
-  else if (!requiresAuth && currentUser) next('home')
-  else next()
-})
+// 
+// router.beforeEach((to, from, next) => {
+//   let currentUser = firebase.auth().currentUser;
+//   let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+//
+//   if(requiresAuth && !currentUser) next('sign_in')
+//   else if (!requiresAuth && currentUser) next('home')
+//   else next()
+// })
 export default router
