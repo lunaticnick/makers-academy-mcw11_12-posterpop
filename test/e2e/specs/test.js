@@ -2,6 +2,7 @@ module.exports = {
   'user is redirected to home page after sign in': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
+
     browser
       .url(devServer)
       .waitForElementVisible('#app', 5000)
