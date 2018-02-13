@@ -1,14 +1,16 @@
-// module.exports = {
-//   'Shows The extrapolated url link': function test(browser) {
-//     const devServer = browser.globals.devServerURL;
-//
-//     browser
-//       .url(devServer)
-//       .waitForElementVisible('#app', 5000)
-//       .click('input[id="chooseFile"]')
-//       .setValue('input[type="file"]', require('path').resolve('https://i.imgur.com/xo03IMi.jpg'))
-//       .click("#sendImage")
-//       .assert.elementPresent('#extrapolatedLink', 'https')
-//       .end();
-//   },
-// };
+module.exports = {
+  'Redirect the extracted url to the actual website': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer + "/#/home")
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="file"]', require('path').resolve('/Users/lan/Desktop/makers_academy/week11/mEVENTo/test/e2e/specs/NosAlive.jpg'))
+      .click("#sendImage")
+      .assert.elementPresent('a[name="linkExtraction"]')
+      .waitForElementVisible('button[id="extractedLinkButton"]', 10000)
+      .click('a[name="linkExtraction"]')
+      .assert.urlEquals('http://nosalive.com/')
+    .end();
+  },
+};
