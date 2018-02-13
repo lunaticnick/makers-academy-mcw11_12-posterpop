@@ -43,7 +43,21 @@ module.exports = {
       .end();
   },
 
-  'User navigates to the About us page by redirection': function test(browser) {
+  'User is able to view the Log Out button on the navigation bar': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('#logOutButton', 5000)
+      .assert.elementPresent('#logOutButton')
+      .end();
+  },
+
+  'User navigates to the About Us page by redirection': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -113,15 +127,7 @@ module.exports = {
   //     .end();
   // },
   //
-  // 'Shows the "Log out" button': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('#logOutButton')
-  //     .end();
-  // },
+
   //
   // 'Shows the "Sign in" page': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
