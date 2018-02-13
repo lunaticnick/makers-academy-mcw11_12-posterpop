@@ -43,16 +43,20 @@ module.exports = {
       .end();
   },
 
-  // 'navigation bar about us redirection test': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .click("#infoId")
-  //     .assert.urlEquals(devServer + '/#/about_us')
-  //     .end();
-  // },
+  'User navigates to the About us page by redirection': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('#infoId', 5000)
+      .click("#infoId")
+      .assert.urlEquals(devServer + '/#/about_us')
+      .end();
+  },
   //
   // 'Shows the choose file button': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
