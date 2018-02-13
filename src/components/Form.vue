@@ -29,7 +29,6 @@ export default {
         body: 'test',
         userId: 1,
       }).then((data) => {
-        console.log(data);
         this.submitted = true;
       });
     },

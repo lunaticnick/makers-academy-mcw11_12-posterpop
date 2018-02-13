@@ -5,7 +5,7 @@
   "author": "Léa R. <lea.rosamond@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js ",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
@@ -17,6 +17,7 @@
     "bootstrap": "^4.0.0",
     "bootstrap-vue": "^2.0.0-rc.1",
     "firebase": "^4.9.1",
+    "firebase-tools": "^3.17.4",
     "mongoose": "^5.0.4",
     "vue": "^2.5.2",
     "vue-config": "^1.0.0",
