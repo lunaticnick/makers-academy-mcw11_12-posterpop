@@ -1,7 +1,5 @@
 module.exports = {
 
-  // Sign-In Page Tests START
-
   'Shows the Sign In page': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
@@ -23,7 +21,7 @@ module.exports = {
       .end();
   },
 
-  'Shows the "Sign in" button': function test(browser) {
+  'Shows the Sign In button': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -58,12 +56,7 @@ module.exports = {
       .end();
   },
 
-  // Sign-In Page Tests END
-
-  // Sign-Up Page Tests START
-
-
-  'Shows the "Sign up" page': function test(browser) {
+  'Shows the Sign Up page': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -71,21 +64,20 @@ module.exports = {
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('.signUpForm')
       .end();
-    },
+  },
 
+  'Shows a Sign Up form on the Sign Up page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-    'Shows a sign up form on the signUp page': function test(browser) {
-      const devServer = browser.globals.devServerURL;
+    browser
+      .url(devServer + '/#/sign_up')
+      .waitForElementVisible('#app', 5000)
+      .assert.elementPresent('#email')
+      .assert.elementPresent('#password')
+      .end();
+  },
 
-      browser
-        .url(devServer + '/#/sign_up')
-        .waitForElementVisible('#app', 5000)
-        .assert.elementPresent('#email')
-        .assert.elementPresent('#password')
-        .end();
-    },
-
-  'Shows the "Sign up" button': function test(browser) {
+  'Shows the Sign Up button': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -95,6 +87,7 @@ module.exports = {
       .end();
   },
 
+  // This test is hashed out because user is already registered - we have not created a dummy Firebase
   // 'User is redirected to home page after Sign Up': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
   //
@@ -109,8 +102,7 @@ module.exports = {
   //     .end();
   // },
 
-
-  'Redirects from sign up page to sign in page': function test(browser) {
+  'Redirects from Sign Up page to Sign In page': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -121,200 +113,131 @@ module.exports = {
       .end();
   },
 
+  'User is able to view the name of the app in the navigation bar': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('.home', 5000)
+      .assert.elementPresent('.home')
+      .assert.containsText('.nav-item', 'mEVENTo')
+      .end();
+  },
 
-  // Sign-Up Page Tests END
+  'User is able to view the About Us link in the navigation bar': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-// Home Page Tests START
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('.home', 5000)
+      .assert.elementPresent('.home')
+      .assert.containsText('li:nth-of-type(2)', 'About Us')
+      .end();
+  },
 
-'User is able to view the name of the app in the navigation bar': function test(browser) {
-  const devServer = browser.globals.devServerURL;
+  'User navigates to the About Us page by redirection': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-  browser
-    .url(devServer)
-    .waitForElementVisible('#app', 5000)
-    .setValue('input[type="text"]', 'example@test.com')
-    .setValue('input[type="password"]', '123456')
-    .click('#signInButton')
-    .waitForElementVisible('.home', 5000)
-    .assert.elementPresent('.home')
-    .assert.containsText('.nav-item', 'mEVENTo')
-    .end();
-},
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('#infoId', 5000)
+      .click("#infoId")
+      .assert.urlEquals(devServer + '/#/about_us')
+      .end();
+  },
 
-'User is able to view the About Us link in the navigation bar': function test(browser) {
-  const devServer = browser.globals.devServerURL;
+  'User is able to view the Sign Out button on the navigation bar': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-  browser
-    .url(devServer)
-    .waitForElementVisible('#app', 5000)
-    .setValue('input[type="text"]', 'example@test.com')
-    .setValue('input[type="password"]', '123456')
-    .click('#signInButton')
-    .waitForElementVisible('.home', 5000)
-    .assert.elementPresent('.home')
-    .assert.containsText('li:nth-of-type(2)', 'About Us')
-    .end();
-},
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('#logOutButton', 5000)
+      .assert.elementPresent('#logOutButton')
+      .end();
+  },
 
-'User navigates to the About Us page by redirection': function test(browser) {
-  const devServer = browser.globals.devServerURL;
+  'User is signed out when pressing the Sign Out button and sent to Sign In page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-  browser
-    .url(devServer)
-    .waitForElementVisible('#app', 5000)
-    .setValue('input[type="text"]', 'example@test.com')
-    .setValue('input[type="password"]', '123456')
-    .click('#signInButton')
-    .waitForElementVisible('#infoId', 5000)
-    .click("#infoId")
-    .assert.urlEquals(devServer + '/#/about_us')
-    .end();
-},
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('#logOutButton', 5000)
+      .click('#logOutButton')
+      .waitForElementVisible('.signInForm', 5000)
+      .assert.urlEquals(devServer + '/#/sign_in')
+      .end();
+  },
 
-'User is able to view the Log Out button on the navigation bar': function test(browser) {
-  const devServer = browser.globals.devServerURL;
+  'Shows the choose file button on the home page when logged in': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-  browser
-    .url(devServer)
-    .waitForElementVisible('#app', 5000)
-    .setValue('input[type="text"]', 'example@test.com')
-    .setValue('input[type="password"]', '123456')
-    .click('#signInButton')
-    .waitForElementVisible('#logOutButton', 5000)
-    .assert.elementPresent('#logOutButton')
-    .end();
-},
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('.capture-photo', 5000)
+      .assert.elementPresent('.capture-photo')
+      .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
+      .end();
+  },
 
-'User is loged out when pressing the Log Out button and sent to Sign In page': function test(browser) {
-  const devServer = browser.globals.devServerURL;
+  'Shows the Send Image button': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-  browser
-    .url(devServer)
-    .waitForElementVisible('#app', 5000)
-    .setValue('input[type="text"]', 'example@test.com')
-    .setValue('input[type="password"]', '123456')
-    .click('#signInButton')
-    .waitForElementVisible('#logOutButton', 5000)
-    .click('#logOutButton')
-    .waitForElementVisible('.signInForm', 5000)
-    .assert.urlEquals(devServer + '/#/sign_in')
-    .end();
-},
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('.capture-photo', 5000)
+      .assert.elementPresent('.capture-photo')
+      .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
+      .setValue('input[type="file"]', require('path').resolve('./test/e2e/specs/NosAlive.jpg'))
+      .assert.elementPresent('.capture-photo')
+      .assert.elementPresent('#sendImage')
+      .end();
+  },
 
-'Shows the choose file button on the home page when logged in': function test(browser) {
-  const devServer = browser.globals.devServerURL;
+  'User can see the button with the poster link': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
-  browser
-    .url(devServer)
-    .waitForElementVisible('#app', 5000)
-    .setValue('input[type="text"]', 'example@test.com')
-    .setValue('input[type="password"]', '123456')
-    .click('#signInButton')
-    .waitForElementVisible('.capture-photo', 5000)
-    .assert.elementPresent('.capture-photo')
-    .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
-    .end();
-},
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setValue('input[type="text"]', 'example@test.com')
+      .setValue('input[type="password"]', '123456')
+      .click('#signInButton')
+      .waitForElementVisible('#chooseFile', 5000)
+      .setValue('input[type="file"]', require('path').resolve('./test/e2e/specs/NosAlive.jpg'))
+      .click("#sendImage")
+      .assert.elementPresent('a[name="linkExtraction"]')
+      .waitForElementVisible('button[id="extractedLinkButton"]', 10000)
+      .click('a[name="linkExtraction"]')
+      .assert.urlEquals('http://nosalive.com/')
+      .end();
+  },
 
-'Shows the "Send image" button': function test(browser) {
-  const devServer = browser.globals.devServerURL;
-
-  browser
-  .url(devServer)
-  .waitForElementVisible('#app', 5000)
-  .setValue('input[type="text"]', 'example@test.com')
-  .setValue('input[type="password"]', '123456')
-  .click('#signInButton')
-  .waitForElementVisible('.capture-photo', 5000)
-  .assert.elementPresent('.capture-photo')
-  .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
-  .setValue('input[type="file"]', require('path').resolve('./test/e2e/specs/NosAlive.jpg'))
-  .assert.elementPresent('.capture-photo')
-  .assert.elementPresent('#sendImage')
-  .end();
-},
-
-// Home Page Tests END
-
-
-
-
-// browser
-//   .url(devServer)
-//   .waitForElementVisible('#app', 5000)
-//   .setValue('input[type="text"]', 'example@test.com')
-//   .setValue('input[type="password"]', '123456')
-//   .click('#signInButton')
-//   .waitForElementVisible('#chooseFile', 5000)
-//   .setValue('input[type="file"]', require('path').resolve('./test/e2e/specs/NosAlive.jpg'))
-//   .click("#sendImage")
-//   .assert.elementPresent('a[name="linkExtraction"]')
-//   .waitForElementVisible('button[id="extractedLinkButton"]', 10000)
-//   .click('a[name="linkExtraction"]')
-//   .assert.urlEquals('http://nosalive.com/')
-// .end();
-// },
-
-
-  //
-  // 'Shows the "Send image" button': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //   .url(devServer)
-  //   .waitForElementVisible('#app', 5000)
-  //   .setValue('input[type="text"]', 'example@test.com')
-  //   .setValue('input[type="password"]', '123456')
-  //   .click('#signInButton')
-  //   .waitForElementVisible('.capture-photo', 5000)
-  //   .assert.elementPresent('.capture-photo')
-  //   .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
-  //   .setValue('input[type="file"]', require('path').resolve('https://i.imgur.com/xo03IMi.jpg'))
-  //   .assert.elementPresent('.capture-photo')
-  //   .assert.elementPresent('#sendImage')
-  //   .end();
-  // },
-  //
-
-  // 'Shows the "Log in" button': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('#logInButt')
-  //     .end();
-  // },
-  //
-
-  //
-  // 'Sign-up form redirection test': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/sign-up")
-  //     .waitForElementVisible('#app', 5000)
-  //     .click('#signUpButton')
-  //     .assert.urlEquals(devServer + '/#/sign_in')
-  //     .end();
-  // },
-
-
-
-  //
-  // 'Shows the "Sign up" page': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + '/#/sign_up')
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('.signUpForm')
-  //     .end();
-  // },
-  //
-  //
-
-
-
-}
+};
