@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="">
-    <form class="signUpForm">
+    <div class="signUpForm">
       <p>Please create a new account below</p>
       Email:                 <input type="text" v-model="email" id="email">
       Password:              <input type="password" v-model="password" id="password">
-    </form>
+    </div>
     <button v-on:click="signUp">Sign Up</button>
     <span>or go back to <router-link id="signInHyperlink" to="/sign_in">login</router-link></span>
   </div>

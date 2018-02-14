@@ -4,6 +4,8 @@
      <b-nav-item>{{ title }}</b-nav-item>
      <b-nav-item to="/about_us" id="infoId">{{ info }}</b-nav-item>
      <b-button v-on:click="signOut" id="logOutButton">Log Out</b-button>
+     <b-button id="my_list">My List</b-button>
+
    </b-nav>
    <h3>{{ message }}</h3>
  </div>
