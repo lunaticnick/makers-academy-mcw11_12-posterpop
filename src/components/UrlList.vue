@@ -1,11 +1,9 @@
 <template>
 <div id="links-container">
-  <button id="test" v-on:click.prevent="showUrl">click  </button>
-  <ul id='example-1'>
-   <li v-for="(value, key) in list">
+  <!-- <button id="test" v-on:click.prevent="showUrl">click  </button> -->
+   <li class='listLinks'  v-for="(value, key) in list">
      {{ value }}
    </li>
-  </ul>
 
 
 
@@ -27,12 +25,11 @@ export default {
       list: ''
     }
   },
+  mounted(){this.showUrl()},
   methods: {
     showUrl: function() {
       firebase.database().ref('users/' + this.uid).on('value',(snapshot) =>
         this.list = snapshot.val());
-        console.log(this.list)
-
     }
   }
 };
