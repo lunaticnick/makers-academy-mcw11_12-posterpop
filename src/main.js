@@ -13,25 +13,25 @@ Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
 let app;
 let config = {
-    apiKey: "AIzaSyA2Io8q1VNfHX0r6zOnVmRw-_Ijh3JJvz8",
-    authDomain: "meventoapp.firebaseapp.com",
-    databaseURL: "https://meventoapp.firebaseio.com",
-    projectId: "meventoapp",
-    storageBucket: "meventoapp.appspot.com",
-    messagingSenderId: "390824242533"
-  };
+  apiKey: "AIzaSyDUT4H6FTVp-HoiEfXW38YqARZYLOuYkN4",
+  authDomain: "posterpop-app.firebaseapp.com",
+  databaseURL: "https://posterpop-app.firebaseio.com",
+  projectId: "posterpop-app",
+  storageBucket: "posterpop-app.appspot.com",
+  messagingSenderId: "74742822159"
+};
 
-  firebase.initializeApp(config);
-  firebase.auth().onAuthStateChanged(function(user){
-    if(!app){
-      /* eslint-disable no-new */
-      app = new Vue({
-        el: '#app',
-        router,
-        components: {
-          App,
-        },
-        template: '<App/>',
-      });
-    }
-  })
+firebase.initializeApp(config);
+firebase.auth().onAuthStateChanged(function(user) {
+  if (!app) {
+    /* eslint-disable no-new */
+    app = new Vue({
+      el: '#app',
+      router,
+      components: {
+        App,
+      },
+      template: '<App/>',
+    });
+  }
+})
