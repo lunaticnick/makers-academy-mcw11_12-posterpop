@@ -73,6 +73,18 @@ module.exports = {
       .end();
     },
 
+
+    'Shows a sign up form on the signUp page': function test(browser) {
+      const devServer = browser.globals.devServerURL;
+
+      browser
+        .url(devServer + '/#/sign_up')
+        .waitForElementVisible('#app', 5000)
+        .assert.elementPresent('#email')
+        .assert.elementPresent('#password')
+        .end();
+    },
+
   // 'Shows the "Sign up" button': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
   //
@@ -219,16 +231,6 @@ module.exports = {
   //     .end();
   // },
   //
-  // 'Shows a sign up form on the signUp page': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + '/#/sign_up')
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('#email')
-  //     .assert.elementPresent('#password')
-  //     .end();
-  // },
   //
 
   //
