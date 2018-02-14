@@ -9,7 +9,7 @@ module.exports = {
       .setValue('input[type="password"]', '123456')
       .click('#signInButton')
       .waitForElementVisible('#chooseFile', 5000)
-      .setValue('input[type="file"]', require('path').resolve('/Users/lan/Desktop/makers_academy/week11/mEVENTo/test/e2e/specs/NosAlive.jpg'))
+      .setValue('input[type="file"]', require('path').resolve('./test/e2e/specs/NosAlive.jpg'))
       .click("#sendImage")
       .assert.elementPresent('a[name="linkExtraction"]')
       .waitForElementVisible('button[id="extractedLinkButton"]', 10000)
