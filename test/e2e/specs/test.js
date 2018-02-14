@@ -95,16 +95,18 @@ module.exports = {
       .end();
   },
 
-  // 'Sign-up form redirection test': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .click('#signUpButton')
-  //     .assert.urlEquals(devServer + '/#/sign_up')
-  //     .end();
-  // },
+  
+  'Redirects from sign up page to sign in page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer + '/#/sign_up')
+      .waitForElementVisible('#app', 5000)
+      .click('#signInHyperlink')
+      .assert.urlEquals(devServer + '/#/sign_in')
+      .end();
+  },
+
 
 
   // Sign-Up Page Tests END
@@ -219,6 +221,16 @@ module.exports = {
   //
 
   //
+  // 'Sign-up form redirection test': function test(browser) {
+  //   const devServer = browser.globals.devServerURL;
+  //
+  //   browser
+  //     .url(devServer + "/#/sign-up")
+  //     .waitForElementVisible('#app', 5000)
+  //     .click('#signUpButton')
+  //     .assert.urlEquals(devServer + '/#/sign_in')
+  //     .end();
+  // },
 
 
 
@@ -235,16 +247,6 @@ module.exports = {
   //
   //
 
-  //
-  // 'Redirects from sign up page to sign in page': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + '/#/sign_up')
-  //     .waitForElementVisible('#app', 5000)
-  //     .click('#signInHyperlink')
-  //     .assert.urlEquals(devServer + '/#/sign_in')
-  //     .end();
-  // },
+
 
 };
