@@ -51,8 +51,12 @@ export default {
       this.getBase64Image(files[0])
         .then((url) => {
           this.imgURL = url;
-          this.strImage = this.imgURL.replace(/^data:image\/[a-z]+;base64,/, "");
         });
+        this.removeBase64Prefix()
+    },
+
+    removeBase64Prefix() {
+      this.strImage = this.imgURL.replace(/^data:image\/[a-z]+;base64,/, "");
     },
 
     post() {
@@ -79,10 +83,6 @@ export default {
     },
     addUrl(webSite) {
       this.uid = firebase.auth().currentUser.uid;
-      // var urlData = {
-      //   webSite: webSite,
-      //   // uid: this.uid
-      // };
       firebase.database().ref('users/'+ this.uid).push(webSite)
     },
   },
