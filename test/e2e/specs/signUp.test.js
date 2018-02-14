@@ -50,7 +50,7 @@ module.exports = {
   // //     .setValue('input[type="password"]', '123456')
   // //     .click('#signInButton')
   // //     .waitForElementVisible('.homeMessage', 5000)
-  // //     .assert.containsText('.homeMessage', 'Welcome to your mEVENTo page!')
+  // //     .assert.containsText('.homeMessage', 'Welcome to posterpop!')
   // //     .end();
   // // },
   //
