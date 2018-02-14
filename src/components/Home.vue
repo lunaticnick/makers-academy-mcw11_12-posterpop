@@ -5,6 +5,7 @@
       <b-nav-item>{{ title }}</b-nav-item>
       <b-nav-item to="/about_us" id="infoId">{{ info }}</b-nav-item>
       <b-button v-on:click="signOut" id="logOutButton">Log Out</b-button>
+      <b-button to="/my_links" id="my_links">My Links</b-button>
     </b-nav>
   </div>
   <div class='homeMessage'>

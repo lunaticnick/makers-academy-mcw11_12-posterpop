@@ -7,6 +7,7 @@ import CapturePhoto from '@/components/CapturePhoto';
 import Form from '@/components/Form';
 import SignUp from '@/components/SignUp'
 import SignIn from '@/components/SignIn'
+import UrlList from '@/components/UrlList'
 import firebase from 'firebase'
 
 Vue.use(Router);
@@ -36,6 +37,16 @@ let router = new Router({
       path: '/about_us',
       components: {
         home: Home,
+      },
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/my_links',
+      components: {
+        home: Home,
+        urlList: UrlList,
       },
       meta: {
         requiresAuth: true
