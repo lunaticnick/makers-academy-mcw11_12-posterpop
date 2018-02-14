@@ -157,6 +157,21 @@ module.exports = {
     .end();
 },
 
+'User navigates to the About Us page by redirection': function test(browser) {
+  const devServer = browser.globals.devServerURL;
+
+  browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .setValue('input[type="text"]', 'example@test.com')
+    .setValue('input[type="password"]', '123456')
+    .click('#signInButton')
+    .waitForElementVisible('#infoId', 5000)
+    .click("#infoId")
+    .assert.urlEquals(devServer + '/#/about_us')
+    .end();
+},
+
 'User is able to view the Log Out button on the navigation bar': function test(browser) {
   const devServer = browser.globals.devServerURL;
 
@@ -183,20 +198,7 @@ module.exports = {
   //
 
   //
-  // 'User navigates to the About Us page by redirection': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer)
-  //     .waitForElementVisible('#app', 5000)
-  //     .setValue('input[type="text"]', 'example@test.com')
-  //     .setValue('input[type="password"]', '123456')
-  //     .click('#signInButton')
-  //     .waitForElementVisible('#infoId', 5000)
-  //     .click("#infoId")
-  //     .assert.urlEquals(devServer + '/#/about_us')
-  //     .end();
-  // },
+
   //
   // 'Shows the choose file button on the home page when logged in': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
