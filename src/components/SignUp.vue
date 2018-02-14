@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<!-- /* <style scoped>
 h1,
 h2 {
   font-weight: normal;
@@ -56,4 +56,4 @@ li {
 a {
   color: #42b983;
 }
-</style>
+</style> */ -->

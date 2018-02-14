@@ -1,3 +1,28 @@
-.page-title{
-  color: red;
+#app {
+  font-family: 'arial';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
+#body {
+  background-color: #FBEFE6;
+
+}
+.navTitle{
+  font-family: 'Carter One', cursive;
+  color: white;
+
+}
+.pageTitle{
+  font-family: 'Carter One', cursive;
+  color: #FC9A82;
+}
+ .navButton {
+  flex-direction: row;
+ }
+
+ .navButton > * {
+   margin-right: 10px
+ }
