@@ -2,6 +2,7 @@
 <div id="links-container">
   <li class='listLinks' v-for="(value, key) in list">
     <a name="url_from_list" id="url_list" v-bind:href='value'>{{ value }}</a>
+    <button v-on:click="removeUrl(key)" id="remove_url">Delete</button>
   </li>
 </div>
 </template>
@@ -24,7 +25,17 @@ export default {
     showUrl: function() {
       firebase.database().ref('users/' + this.uid).on('value', (snapshot) =>
         this.list = snapshot.val());
+    },
+    removeUrl: function(key) {
+      firebase.database().ref('users/' + this.uid).on('value', (snapshot) =>
+        snapshot.forEach( function(reciptSnap) {
+          console.log(reciptSnap.ref)
+          if(reciptSnap.key === key){
+          reciptSnap.ref.remove()
+        }
+
+        })
+      )}
     }
-  }
-};
+  };
 </script>
