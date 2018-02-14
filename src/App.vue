@@ -4,6 +4,8 @@
 
     <router-view name="home"></router-view>
 
+    <router-view name="aboutUs"></router-view>
+
     <router-view name="pageTitle"></router-view>
 
     <router-view name="capturePhoto"></router-view>

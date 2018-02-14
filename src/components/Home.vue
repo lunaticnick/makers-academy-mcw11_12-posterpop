@@ -2,7 +2,7 @@
 <div>
   <div class='home'>
     <b-nav>
-      <b-nav-item>{{ title }}</b-nav-item>
+      <b-nav-item to="/home" id="homePage">{{ title }}</b-nav-item>
       <b-nav-item to="/about_us" id="infoId">{{ info }}</b-nav-item>
       <b-button v-on:click="signOut" id="logOutButton">Log Out</b-button>
       <b-button to="/my_links" id="my_links">My Links</b-button>
@@ -20,9 +20,9 @@ export default {
   name: 'Home',
   data() {
     return {
-      title: 'mEVENTo',
+      title: 'posterpop!',
       info: 'About Us',
-      message: 'Welcome to your mEVENTo page!'
+      message: 'Welcome to posterpop!'
     }
   },
   methods: {

@@ -8,6 +8,7 @@ import Form from '@/components/Form';
 import SignUp from '@/components/SignUp'
 import SignIn from '@/components/SignIn'
 import UrlList from '@/components/UrlList'
+import AboutUs from '@/components/AboutUs'
 import firebase from 'firebase'
 
 Vue.use(Router);
@@ -28,7 +29,7 @@ let router = new Router({
         home: Home,
         pageTitle: PageTitle,
         capturePhoto: CapturePhoto,
-      
+
       },
       meta: {
         requiresAuth: true
@@ -38,6 +39,7 @@ let router = new Router({
       path: '/about_us',
       components: {
         home: Home,
+        aboutUs: AboutUs,
       },
       meta: {
         requiresAuth: true

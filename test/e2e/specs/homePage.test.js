@@ -15,7 +15,7 @@ module.exports = {
   'User is redirected to home page after Sign In': function test(browser) {
 
     browser
-      .assert.containsText('.homeMessage', 'Welcome to your mEVENTo page!')
+      .assert.containsText('.homeMessage', 'Welcome to posterpop!')
       .end();
   },
 
@@ -23,7 +23,7 @@ module.exports = {
 
     browser
       .assert.elementPresent('.home')
-      .assert.containsText('.nav-item', 'mEVENTo')
+      .assert.containsText('.nav-item', 'posterpop!')
       .end();
   },
 
@@ -41,6 +41,15 @@ module.exports = {
       .waitForElementVisible('#infoId', 5000)
       .click("#infoId")
       .assert.urlEquals(devServer + '/#/about_us')
+      .end();
+  },
+
+  'User redirects to home page after clicking posterpop in navigation bar': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .click("#homePage")
+      .assert.urlEquals(devServer + '/#/home')
       .end();
   },
 
