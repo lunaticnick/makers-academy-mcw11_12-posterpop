@@ -104,7 +104,6 @@ module.exports = {
     .assert.elementPresent('#sendImage')
     .end();
   },
-  //
   // 'Shows the "Sign up" button': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
   //
@@ -134,8 +133,6 @@ module.exports = {
   //     .assert.urlEquals(devServer + '/#/sign_up')
   //     .end();
   // },
-  //
-
   //
   // 'Shows the "Sign in" page': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
