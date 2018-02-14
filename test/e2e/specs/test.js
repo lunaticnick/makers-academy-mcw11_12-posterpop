@@ -85,13 +85,24 @@ module.exports = {
         .end();
     },
 
-  // 'Shows the "Sign up" button': function test(browser) {
+  'Shows the "Sign up" button': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer + "/#/sign_up")
+      .waitForElementVisible('#app', 5000)
+      .assert.elementPresent('#signUpButton')
+      .end();
+  },
+
+  // 'Sign-up form redirection test': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
   //
   //   browser
   //     .url(devServer + "/#/home")
   //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('#signUpButton')
+  //     .click('#signUpButton')
+  //     .assert.urlEquals(devServer + '/#/sign_up')
   //     .end();
   // },
 
@@ -206,16 +217,7 @@ module.exports = {
   //     .end();
   // },
   //
-  // 'Sign-up form redirection test': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + "/#/home")
-  //     .waitForElementVisible('#app', 5000)
-  //     .click('#signUpButton')
-  //     .assert.urlEquals(devServer + '/#/sign_up')
-  //     .end();
-  // },
+
   //
 
 
