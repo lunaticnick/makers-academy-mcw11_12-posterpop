@@ -217,35 +217,46 @@ module.exports = {
     .end();
 },
 
+'Shows the "Send image" button': function test(browser) {
+  const devServer = browser.globals.devServerURL;
+
+  browser
+  .url(devServer)
+  .waitForElementVisible('#app', 5000)
+  .setValue('input[type="text"]', 'example@test.com')
+  .setValue('input[type="password"]', '123456')
+  .click('#signInButton')
+  .waitForElementVisible('.capture-photo', 5000)
+  .assert.elementPresent('.capture-photo')
+  .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
+  .setValue('input[type="file"]', require('path').resolve('./test/e2e/specs/NosAlive.jpg'))
+  .assert.elementPresent('.capture-photo')
+  .assert.elementPresent('#sendImage')
+  .end();
+},
+
 // Home Page Tests END
 
 
 
 
-  //
+// browser
+//   .url(devServer)
+//   .waitForElementVisible('#app', 5000)
+//   .setValue('input[type="text"]', 'example@test.com')
+//   .setValue('input[type="password"]', '123456')
+//   .click('#signInButton')
+//   .waitForElementVisible('#chooseFile', 5000)
+//   .setValue('input[type="file"]', require('path').resolve('./test/e2e/specs/NosAlive.jpg'))
+//   .click("#sendImage")
+//   .assert.elementPresent('a[name="linkExtraction"]')
+//   .waitForElementVisible('button[id="extractedLinkButton"]', 10000)
+//   .click('a[name="linkExtraction"]')
+//   .assert.urlEquals('http://nosalive.com/')
+// .end();
+// },
 
 
-  //
-
-  //
-
-  //
-
-  //
-  // 'Shows the choose file button on the home page when logged in': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer)
-  //     .waitForElementVisible('#app', 5000)
-  //     .setValue('input[type="text"]', 'example@test.com')
-  //     .setValue('input[type="password"]', '123456')
-  //     .click('#signInButton')
-  //     .waitForElementVisible('.capture-photo', 5000)
-  //     .assert.elementPresent('.capture-photo')
-  //     .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
-  //     .end();
-  // },
   //
   // 'Shows the "Send image" button': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
@@ -306,4 +317,4 @@ module.exports = {
 
 
 
-};
+}
