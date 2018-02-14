@@ -1,13 +1,17 @@
-<template>
-  <div>
+<template id="bgSignIn">
+
+  <!-- <b-container id="singInContainer> -->
     <div class="signInForm">
-      <h3>Sign In</h3>
-      Email:    <input type="text" v-model="email" id="email"><br>
-      Password: <input type="password" v-model="password" id="password"><br>
-      <button v-on:click="signIn" id="signInButton">Sign In</button>
-      <p>You don't have an account yet, please create <router-link id="signUpHyperlink" to="sign_up">one.</router-link></p>
+      <h3 id="SignInHeader">Welcome back!</h3> <br><br>
+      <b-col> Email:</b-col>
+      <b-col><input type="text" v-model="email" id="email"/><br></b-col>
+      Password: <b-col> <input type="password" v-model="password" id="password"/><br><br> </b-col>
+      <button v-on:click="signIn" id="signInButton">Login</button>
+      <br><br>
+      <p class="signInForm">Oh? don't you have an account yet? <br>please create one <router-link id="signUpHyperlink" to="sign_up">here</router-link>.</p>
     </div>
-  </div>
+  <!-- </b-container> -->
+
 </template>
 
 <script>
@@ -37,24 +41,7 @@ export default {
 }
 </script>
 
- <!-- /* <style scoped>
-h1,
-h3 {
-  font-weight: normal;
-  color: green;
-}
+<style>
+  body {background-color: #white;}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style> */ -->
+</style>

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <div class="signUpForm">
-      <p>Please create a new account below</p>
+      <h3 id="signUpHeader">New Account</h3>
       Email:                 <input type="text" v-model="email" id="email">
       Password:              <input type="password" v-model="password" id="password">
     </div>

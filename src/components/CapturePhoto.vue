@@ -1,20 +1,27 @@
 <template>
   <div class="capture-photo">
 
-    <input id="chooseFile"
+    <input
+          id="chooseFile"
           type="file"
           accept="image/*"
           capture="environment"
           @change="onImageCaptured($event.target.name, $event.target.files)">
 
+
+
+
     <div v-show="imgURL">
       <img v-bind:src="imgURL" style="width:200px">
-      <button id="sendImage" v-on:click.prevent="post">Send Image</button>
+      <b-button id="sendImage" v-on:click.prevent="post">Send Image</b-button>
 
-      <button id="extractedLinkButton" v-show="urlLink">
+
+      <b-button id="extractedLinkButton" v-show="urlLink">
         <a name="linkExtraction" id="extractedLink" v-bind:href="urlLink">{{ urlLink }}</a>
-      </button>
+      </b-button>
     </div>
+
+
 
   </div>
 </template>

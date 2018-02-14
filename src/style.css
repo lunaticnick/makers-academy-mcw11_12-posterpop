@@ -7,7 +7,7 @@
   margin-top: 60px;
 }
 #body {
-  background-color: #FBEFE6;
+
 
 }
 .navTitle{
@@ -19,6 +19,7 @@
   font-family: 'Carter One', cursive;
   color: #FC9A82;
 }
+
  .navButton {
   flex-direction: row;
  }
@@ -26,3 +27,93 @@
  .navButton > * {
    margin-right: 10px
  }
+ .aboutUs {
+     color: #fc9a82;
+     text-decoration: none;
+     background-color: transparent;
+     -webkit-text-decoration-skip: objects;
+
+ }
+ .nav-link {
+   color: #A7D9BB;
+
+
+ }
+#infoId {
+   color: blue;
+ }
+
+
+ .logout {
+     color: #f8f9fa;
+     background-color: #fc9a82;
+     background-image: none;
+     border-color: #fc9a82;
+ }
+
+
+/* capturePhoto.vue */
+
+/* .chooseFileButton{
+  color: #f8f9fa;
+background-color: #fc9a82;
+background-image: none;
+border-color: #fc9a82;
+} */
+
+/* signIn */
+#SignInHeader {
+  color: #A7D9BB;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+}
+.signInForm {
+  font-family: 'Lato', sans-serif;
+
+}
+#password {
+
+
+
+}
+#email {
+
+}
+#bgSignIn{
+  background-color: white;
+}
+#signInButton {
+  margin-bottom: 10px;
+  color: #f8f9fa;
+  background-color: #fc9a82;
+  background-image: none;
+  border-color: #fc9a82;
+  padding: 0 60px;
+
+}
+#signUpHyperlink {
+  font-weight: bold;
+  color: #A7D9BB;
+}
+/* FirstPage */
+#fp {
+  background-color: #FBE6D9;
+
+}
+#fpTitle {
+
+}
+#clickMe {
+  margin-bottom: 10px;
+  color: #f8f9fa;
+  background-color: #fc9a82;
+  background-image: none;
+  border-color: #fc9a82;
+
+}
+
+/* Signup */
+#SignUpHeader {
+
+
+}

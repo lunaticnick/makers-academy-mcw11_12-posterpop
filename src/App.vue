@@ -11,6 +11,7 @@
     <router-view name="signUp"></router-view>
 
     <router-view name="signIn"></router-view>
+    <router-view name="firstPage"></router-view>
 </div>
 </template>
 
