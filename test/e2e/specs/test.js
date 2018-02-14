@@ -95,7 +95,21 @@ module.exports = {
       .end();
   },
 
-  
+  // 'User is redirected to home page after Sign Up': function test(browser) {
+  //   const devServer = browser.globals.devServerURL;
+  //
+  //   browser
+  //     .url(devServer + "/#/sign_up")
+  //     .waitForElementVisible('#app', 5000)
+  //     .setValue('input[type="text"]', 'example@test.com')
+  //     .setValue('input[type="password"]', '123456')
+  //     .click('#signInButton')
+  //     .waitForElementVisible('.homeMessage', 5000)
+  //     .assert.containsText('.homeMessage', 'Welcome to your mEVENTo page!')
+  //     .end();
+  // },
+
+
   'Redirects from sign up page to sign in page': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
@@ -111,7 +125,25 @@ module.exports = {
 
   // Sign-Up Page Tests END
 
+// Sign-Up Page Tests START
 
+'User is able to view the name of the app in the navigation bar': function test(browser) {
+  const devServer = browser.globals.devServerURL;
+
+  browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .setValue('input[type="text"]', 'example@test.com')
+    .setValue('input[type="password"]', '123456')
+    .click('#signInButton')
+    .waitForElementVisible('.home', 5000)
+    .assert.elementPresent('.home')
+    .assert.containsText('.nav-item', 'mEVENTo')
+    .end();
+},
+
+
+// Sign-Up Page Tests END
 
 
   //
