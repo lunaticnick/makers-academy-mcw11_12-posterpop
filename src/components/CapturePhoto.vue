@@ -56,7 +56,7 @@ export default {
     },
 
     post() {
-      this.$http.post('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCn9ifg_YHD4PTkTHyYqq0GhreGYJGOqKA', {
+      this.$http.post('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCpaaFUFbuWmztaoTqJ-pKJ-iZHHCyICV8', {
         requests: [{
           image: {
             content: this.strImage,
