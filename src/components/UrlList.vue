@@ -1,6 +1,5 @@
 <template>
 <div id="links-container">
-  <!-- <button id="test" v-on:click.prevent="showUrl">click  </button> -->
    <li class='listLinks'  v-for="(value, key) in list">
      {{ value }}
    </li>
