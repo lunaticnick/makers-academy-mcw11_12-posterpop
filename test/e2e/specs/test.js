@@ -125,7 +125,7 @@ module.exports = {
 
   // Sign-Up Page Tests END
 
-// Sign-Up Page Tests START
+// Home Page Tests START
 
 'User is able to view the name of the app in the navigation bar': function test(browser) {
   const devServer = browser.globals.devServerURL;
@@ -142,41 +142,30 @@ module.exports = {
     .end();
 },
 
+'User is able to view the About Us link in the navigation bar': function test(browser) {
+  const devServer = browser.globals.devServerURL;
 
-// Sign-Up Page Tests END
+  browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .setValue('input[type="text"]', 'example@test.com')
+    .setValue('input[type="password"]', '123456')
+    .click('#signInButton')
+    .waitForElementVisible('.home', 5000)
+    .assert.elementPresent('.home')
+    .assert.containsText('li:nth-of-type(2)', 'About Us')
+    .end();
+},
+
+
+// Home Page Tests END
 
 
   //
+
+  
   //
-  // 'User is able to view the name of the app in the navigation bar': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer)
-  //     .waitForElementVisible('#app', 5000)
-  //     .setValue('input[type="text"]', 'example@test.com')
-  //     .setValue('input[type="password"]', '123456')
-  //     .click('#signInButton')
-  //     .waitForElementVisible('.home', 5000)
-  //     .assert.elementPresent('.home')
-  //     .assert.containsText('.nav-item', 'mEVENTo')
-  //     .end();
-  // },
-  //
-  // 'User is able to view the About Us link in the navigation bar': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer)
-  //     .waitForElementVisible('#app', 5000)
-  //     .setValue('input[type="text"]', 'example@test.com')
-  //     .setValue('input[type="password"]', '123456')
-  //     .click('#signInButton')
-  //     .waitForElementVisible('.home', 5000)
-  //     .assert.elementPresent('.home')
-  //     .assert.containsText('li:nth-of-type(2)', 'About Us')
-  //     .end();
-  // },
+
   //
   // 'User is able to view the Log Out button on the navigation bar': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
