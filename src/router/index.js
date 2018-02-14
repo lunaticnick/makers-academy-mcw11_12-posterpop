@@ -28,6 +28,7 @@ let router = new Router({
         home: Home,
         pageTitle: PageTitle,
         capturePhoto: CapturePhoto,
+        urlList: UrlList,
       },
       meta: {
         requiresAuth: true

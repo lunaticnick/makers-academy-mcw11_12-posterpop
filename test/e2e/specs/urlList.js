@@ -26,8 +26,8 @@ module.exports = {
       .waitForElementVisible('#my_links', 5000)
       .click('#my_links')
       .waitForElementVisible('#links-container', 5000)
-      .assert.containsText('#links-container', 'My Links')
-
+      // .assert.containsText('#links-container', 'My Links')
+      .assert.containsText('#list', 'http://nhm.ac.uk')
       .end();
   },
 
