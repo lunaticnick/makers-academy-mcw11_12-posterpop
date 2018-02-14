@@ -66,7 +66,6 @@ export default {
           }]
         }]
       }).then((dataApi) => {
-        console.log(dataApi)
         this.element = dataApi.body.responses[0].textAnnotations;
         this.element.shift();
 
@@ -80,14 +79,11 @@ export default {
     },
     addUrl(webSite) {
       this.uid = firebase.auth().currentUser.uid;
-      console.log(this.urlLink)
-      var urlData = {
-        // ts: new Date(),
-        webSite: webSite,
-        uid: this.uid
-      };
-      firebase.database().ref('events').push(urlData).then((item) => {console.log(item.key)});
-
+      // var urlData = {
+      //   webSite: webSite,
+      //   // uid: this.uid
+      // };
+      firebase.database().ref('users/'+ this.uid).push(webSite)
     },
   },
 };
