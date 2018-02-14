@@ -1,5 +1,37 @@
 module.exports = {
-  'User is redirected to home page after sign in': function test(browser) {
+  'Shows the Sign In page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .assert.elementPresent('.signInForm')
+      .end();
+  },
+
+  'Shows Sign In form on the Sign In page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .assert.elementPresent('#email')
+      .assert.elementPresent('#password')
+      .end();
+  },
+
+  'Redirects from Sign In page to Sign Up page': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .click('#signUpHyperlink')
+      .assert.urlEquals(devServer + '/#/sign_up')
+      .end();
+  },
+
+  'User is redirected to home page after Sign In': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
@@ -136,27 +168,8 @@ module.exports = {
   // },
   //
 
-  //
-  // 'Shows the "Sign in" page': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + '/#/sign_in')
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('.signInForm')
-  //     .end();
-  // },
-  //
-  // 'Shows a sign in form on the SignIn page': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + '/#/sign_in')
-  //     .waitForElementVisible('#app', 5000)
-  //     .assert.elementPresent('#email')
-  //     .assert.elementPresent('#password')
-  //     .end();
-  // },
+
+
   //
   // 'Shows the "Sign up" page': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
@@ -179,16 +192,7 @@ module.exports = {
   //     .end();
   // },
   //
-  // 'Redirects from sign in page to sign up page': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer + '/#/sign_in')
-  //     .waitForElementVisible('#app', 5000)
-  //     .click('#signUpHyperlink')
-  //     .assert.urlEquals(devServer + '/#/sign_up')
-  //     .end();
-  // },
+
   //
   // 'Redirects from sign up page to sign in page': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
