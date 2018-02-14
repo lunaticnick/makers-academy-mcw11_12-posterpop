@@ -186,6 +186,22 @@ module.exports = {
     .end();
 },
 
+'User is loged out when pressing the Log Out button and sent to Sign In page': function test(browser) {
+  const devServer = browser.globals.devServerURL;
+
+  browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .setValue('input[type="text"]', 'example@test.com')
+    .setValue('input[type="password"]', '123456')
+    .click('#signInButton')
+    .waitForElementVisible('#logOutButton', 5000)
+    .click('#logOutButton')
+    .waitForElementVisible('.signInForm', 5000)
+    .assert.urlEquals(devServer + '/#/sign_in')
+    .end();
+},
+
 
 // Home Page Tests END
 
