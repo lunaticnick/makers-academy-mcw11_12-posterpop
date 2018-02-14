@@ -157,29 +157,31 @@ module.exports = {
     .end();
 },
 
+'User is able to view the Log Out button on the navigation bar': function test(browser) {
+  const devServer = browser.globals.devServerURL;
+
+  browser
+    .url(devServer)
+    .waitForElementVisible('#app', 5000)
+    .setValue('input[type="text"]', 'example@test.com')
+    .setValue('input[type="password"]', '123456')
+    .click('#signInButton')
+    .waitForElementVisible('#logOutButton', 5000)
+    .assert.elementPresent('#logOutButton')
+    .end();
+},
+
 
 // Home Page Tests END
 
 
   //
 
-  
+
   //
 
   //
-  // 'User is able to view the Log Out button on the navigation bar': function test(browser) {
-  //   const devServer = browser.globals.devServerURL;
-  //
-  //   browser
-  //     .url(devServer)
-  //     .waitForElementVisible('#app', 5000)
-  //     .setValue('input[type="text"]', 'example@test.com')
-  //     .setValue('input[type="password"]', '123456')
-  //     .click('#signInButton')
-  //     .waitForElementVisible('#logOutButton', 5000)
-  //     .assert.elementPresent('#logOutButton')
-  //     .end();
-  // },
+
   //
   // 'User navigates to the About Us page by redirection': function test(browser) {
   //   const devServer = browser.globals.devServerURL;
