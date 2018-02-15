@@ -21,31 +21,26 @@
     <h3 class='pageTitle'>{{ message }}</h3>
     </a>
   </div>
-</div>
-
 </template>
 
 <script>
-import firebase from 'firebase'
-
-export default {
-  name: 'Home',
-  data() {
-    return {
-      info: 'About Us',
-      links: 'My Links',
-
-      message: 'posterpop!',
-      tagline: 'Schedule your cultural life with a single snap'
-
+  import firebase from 'firebase'
+  export default {
+    name: 'Home',
+    data() {
+      return {
+        info: 'About Us',
+        links: 'My Links',
+        message: 'posterpop!',
+        tagline: 'Schedule your cultural life with a single snap'
+      }
+    },
+    methods: {
+      signOut: function() {
+        firebase.auth().signOut().then(() => {
+          this.$router.replace('sign_in')
+        })
+      }
     }
-  },
-  methods: {
-    signOut: function() {
-      firebase.auth().signOut().then(() => {
-        this.$router.replace('sign_in')
-      })
-    }
-  }
-};
+  };
 </script>
