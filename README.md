@@ -6,7 +6,9 @@
 
 Try __posterpop!__ for yourself [here](https://posterpop-app.firebaseapp.com).
 
-<!-- adding video recording here -->
+![Sign up](https://media.giphy.com/media/1gQ67DUsXYFShBTOl4/giphy.gif)
+
+![Upload an image of a poster]()
 
 How often have you seen the poster of an event/exhibition on the street/tube, taken a picture of it thinking "I'd love to go there/do this!" and forgotten all about the event?
 
