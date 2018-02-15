@@ -17,7 +17,9 @@
     </b-nav>
   </div>
   <div class='home-message'>
+    <a rel="home" href="/" title="posterpop">
     <h3 class='pageTitle'>{{ message }}</h3>
+    </a>
   </div>
 </div>
 
