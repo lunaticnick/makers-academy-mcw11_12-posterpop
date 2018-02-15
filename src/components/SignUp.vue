@@ -47,9 +47,7 @@ export default {
 </script>
 
  <style scoped>
- body
 
-  .background-color: #fffcf7;
 
  .sign-up-form{
    font-family: 'Lato', sans-serif;

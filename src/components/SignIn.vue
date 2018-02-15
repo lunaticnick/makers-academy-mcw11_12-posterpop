@@ -2,7 +2,7 @@
 
   <!-- <b-container id="singInContainer> -->
     <div class="signInForm">
-      <h3 id="SignInHeader">Welcome back!</h3>
+      <h3 id="SignInHeader">posterpop!</h3>
       <a rel="home" href="/" title="posterpop"><img style="max-width:60px; vertical-align: middle;"
            src="../../build/logo2.png"></a>
            <br><br><br>
@@ -45,6 +45,6 @@ export default {
 </script>
 
 <style>
-  body {background-color: #white;}
+
 
 </style>

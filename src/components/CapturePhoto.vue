@@ -16,15 +16,18 @@
 
 
     <div v-show="imgURL">
-      <img v-bind:src="imgURL" style="width:200px" id='img-imported'>
       <b-col>
       <b-button id="sendImage" v-on:click.prevent="post">Pop it</b-button>
-    </b-col>
+    </b-col><br>
+    <b-button id="extractedLinkButton" v-show="urlLink">
+      <a name="linkExtraction" id="extractedLink" v-bind:href="urlLink">{{ urlLink }}</a>
+    </b-button><br>
+
+      <img v-bind:src="imgURL" style="width:200px" id='img-imported'>
 
 
-      <b-button id="extractedLinkButton" v-show="urlLink">
-        <a name="linkExtraction" id="extractedLink" v-bind:href="urlLink">{{ urlLink }}</a>
-      </b-button>
+
+
 
     </div>
 

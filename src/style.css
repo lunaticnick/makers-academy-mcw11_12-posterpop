@@ -89,9 +89,7 @@ font-family: 'Roboto', sans-serif;
   border-color: #A7D9BB;
   background-image: none;
 }
-footer {
-    display: block;
-}
+
 
 
 #myLinks {
@@ -103,6 +101,7 @@ footer {
   -webkit-text-decoration-skip: objects;
 
 }
+
 
 /* capturePhoto.vue */
 
@@ -120,15 +119,16 @@ footer {
   margin-bottom: 1.5rem;
 
 }
-
 .capture-photo__file-btn input {
   display: none;
 }
+
 #img-imported{
   vertical-align: middle;
 }
+
 #sendImage{
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-family: 'Cabin', sans-serif;
   font-size: 1rem;
   padding: 0.3rem 1rem;
@@ -138,14 +138,11 @@ footer {
   border-color: #fc9a82;
   border: solid 1px #fc9a82;
   vertical-align: middle;
-
-
 }
 
 #extractedLinkButton{
   font-family: 'Cabin', sans-serif;
   font-size: 1rem;
-
   /* padding: 0.3rem 0.2rem; */
   border-radius: 5px;
   border: solid 1px #e8ede8;
@@ -170,9 +167,19 @@ footer {
 /* signIn */
 
 #SignInHeader {
-  color: #A7D9BB;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: lighter;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 1.5rem;
+  font-family: 'Carter One', cursive;
+  color: #FC9A82;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .signInForm {
@@ -214,7 +221,7 @@ footer {
   font-weight: lighter;
 }
 .links-box {
-   /* background-color: #fffefc; */
+  padding: 3rem;
 }
 
 .listLinks {
@@ -229,11 +236,10 @@ footer {
   color: #b5bdbf;
   background-color: #e8ede8;
   background-image: none;
-  /* margin-left: 3rem; */
-  /* height: 1.5rem; */
+
   text-align: margin-right;
   flex-direction: inline-block;
-  /* padding: 0.2rem 0.3rem; */
+
 }
 #url_list {
   color: #b5bdbf;
@@ -248,11 +254,19 @@ footer {
 /* AboutUs.vue */
 
 .aboutUsContent {
+
   color: #b5bdbf;
+  padding: 3rem 2rem;
+  background-color: white;
+  margin: 2rem;
+
 }
 #aboutUsHeader {
-  margin-bottom: 4rem;
-  
+  margin-bottom: 2rem;
+  margin-top: -3rem;
+  padding-top: 1rem;
+
+
   color: #A7D9BB;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
@@ -261,4 +275,8 @@ footer {
 #blog {   font-weight: bold;
   color: #A7D9BB;
 
+}
+.aboutUsBox {
+  background-color: #fffefc;
+  margin-bottom: -2rem;
 }
