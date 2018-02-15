@@ -27,18 +27,4 @@ module.exports = {
       .assert.containsText('.list-links', 'http://NOSALIVE.COM')
       .end();
   },
-
-//   browser
-//     .url(devServer)
-//     .waitForElementVisible('#app', 5000)
-//     .setValue('input[type="text"]', 'example@test.com')
-//     .setValue('input[type="password"]', '123456')
-//     .click('#signInButton')
-//     .waitForElementVisible('#myLinks', 5000)
-//     .click('#my_links')
-//     .waitForElementVisible('#links-container', 5000)
-//     .assert.containsText('#remove_url', 'Delete')
-//     .end();
-// },
-
 }
