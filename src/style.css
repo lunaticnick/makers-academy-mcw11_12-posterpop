@@ -203,21 +203,7 @@ footer {
   color: #A7D9BB;
 }
 
-/* FirstPage */
 
-#fp {
-  background-color: #FBE6D9;
-}
-
-#fpTitle {}
-
-#clickMe {
-  margin-bottom: 10px;
-  color: #f8f9fa;
-  background-color: #fc9a82;
-  background-image: none;
-  border-color: #fc9a82;
-}
 
 /* UrlList */
 
@@ -256,5 +242,23 @@ footer {
 }
 .list-group-item {
     padding: 0.5rem 2rem;
+
+}
+
+/* AboutUs.vue */
+
+.aboutUsContent {
+  color: #b5bdbf;
+}
+#aboutUsHeader {
+  margin-bottom: 4rem;
+  
+  color: #A7D9BB;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+
+}
+#blog {   font-weight: bold;
+  color: #A7D9BB;
 
 }

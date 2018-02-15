@@ -3,7 +3,7 @@
     <div class="signUpForm">
       <h3 id="signUpHeader">New Account</h3>
       <a rel="home" href="/" title="posterpop"><img style="max-width:60px; vertical-align: middle;"
-           src="../../build/vide.png"></a>
+           src="../../build/logo2.png"></a>
            <br><br><br>
 
       <b-col>Email:</b-col>
@@ -48,10 +48,14 @@ export default {
 
  <style scoped>
  body
+
+  .background-color: #fffcf7;
+
  .sign-up-form{
    font-family: 'Lato', sans-serif;
    color: #b5bdbf;
    margin-top: 3rem;
+
 
  }
  #signUpHeader {
@@ -78,5 +82,6 @@ export default {
    font-weight: bold;
    color: #A7D9BB;
  }
+
 
 </style>
