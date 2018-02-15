@@ -8,8 +8,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import './style.css';
 import scriptURL from 'sw-loader!../sw.js';
+if(navigator.serviceWorker) {
 navigator.serviceWorker.register(scriptURL).then(console.log("sw successfully registered"));
-
+}
 Vue.use(VueResource);
 Vue.use(BootstrapVue);
 
