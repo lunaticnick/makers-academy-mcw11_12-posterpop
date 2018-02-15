@@ -2,7 +2,7 @@
   <div class="capture-photo">
 
     <label class="capture-photo__file-btn">
-          Choose a poster
+          Snap your poster
 
 
     <input

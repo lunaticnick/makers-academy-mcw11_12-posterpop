@@ -8,8 +8,8 @@ module.exports = {
       .setValue('input[type="text"]', 'example@test.com')
       .setValue('input[type="password"]', '123456')
       .click('#signInButton')
-      .waitForElementVisible('#my_links', 5000)
-      .click('#my_links')
+      .waitForElementVisible('#myLinks', 5000)
+      .click('#myLinks')
       .assert.urlEquals(devServer + '/#/my_links')
       .end();
   },
@@ -23,8 +23,8 @@ module.exports = {
       .setValue('input[type="text"]', 'example@test.com')
       .setValue('input[type="password"]', '123456')
       .click('#signInButton')
-      .waitForElementVisible('#my_links', 5000)
-      .click('#my_links')
+      .waitForElementVisible('#myLinks', 5000)
+      .click('#myLinks')
       .waitForElementVisible('#links-container', 5000)
       .assert.containsText('.listLinks', 'http://NOSALIVE.COM')
       .end();
@@ -36,12 +36,12 @@ module.exports = {
   //   .setValue('input[type="text"]', 'example@test.com')
   //   .setValue('input[type="password"]', '123456')
   //   .click('#signInButton')
-  //   .waitForElementVisible('#my_links', 5000)
+  //   .waitForElementVisible('#myLinks', 5000)
   //   .click('#my_links')
   //   .waitForElementVisible('#links-container', 5000)
   //   .click('#remove_url')
   //   .assert.containsText('.listLinks', 'http://NOSALIVE.COM')
   //   .end();
-},
+// },
 
 }
