@@ -1,11 +1,12 @@
 <template id="bgSignIn">
 
-  <!-- <b-container id="singInContainer> -->
+
     <div class="signInForm">
       <h3 id="SignInHeader">posterpop!</h3>
       <a rel="home" href="/" title="posterpop"><img style="max-width:60px; vertical-align: middle;"
            src="../../build/logo2.png"></a>
-           <br><br><br>
+           <br>
+           <b-col><p class="tagline">{{ tagline }}</p></b-col>
       <b-col> Email:</b-col>
       <b-col><input type="text" v-model="email" id="email"/></b-col><br>
       Password: <b-col> <input type="password" v-model="password" id="password"/><br><br> </b-col>
@@ -13,7 +14,7 @@
       <br><br>
       <p class="signInForm">Oh? Don't you have an account yet? <br>Please, create one <router-link id="signUpHyperlink" to="sign_up">here</router-link>.</p>
     </div>
-  <!-- </b-container> -->
+
 
 </template>
 
@@ -26,7 +27,8 @@ export default {
  data: function() {
    return {
      email: '',
-     password: ''
+     password: '',
+     tagline: 'Schedule your cultural life with a single snap.'
    }
  },
  methods: {
