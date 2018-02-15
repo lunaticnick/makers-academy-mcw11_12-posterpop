@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Home from '@/components/Home';
-import PageTitle from '@/components/PageTitle';
 import CapturePhoto from '@/components/CapturePhoto';
 import Form from '@/components/Form';
 import SignUp from '@/components/SignUp'
@@ -27,7 +26,6 @@ let router = new Router({
       path: '/home',
       components: {
         home: Home,
-        pageTitle: PageTitle,
         capturePhoto: CapturePhoto,
 
       },

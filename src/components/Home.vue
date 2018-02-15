@@ -13,7 +13,7 @@
 
 
     </b-nav>
-  </div>
+  </div
   <div class='home-message'>
     <h3 class='pageTitle'>{{ message }}</h3>
   </div>
