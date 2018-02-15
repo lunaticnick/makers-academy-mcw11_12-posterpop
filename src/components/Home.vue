@@ -1,17 +1,20 @@
 <template>
 <div>
   <div class='home'>
-    <b-nav>
+    <b-nav class="nav-bar">
 
-      <b-nav-item class='navTitle' id="test">{{ title }}</b-nav-item>
-      <b-navbar-nav class="ml-auto navButton">
-        <b-nav-item  class='aboutUs' to="/about_us" id="infoId">{{ info }}</b-nav-item>
+      <b-nav-item class='nav-title'>{{ title }}</b-nav-item>
+
+      <b-navbar-nav class="ml-auto nav-button">
+
+        <b-nav-item   to="/about_us" id="infoId">{{ info }}</b-nav-item>
+
         <b-button v-on:click="signOut" id="logOutButton" variant="outline-primary logout">Log Out</b-button>
       </b-navbar-nav>
 
     </b-nav>
   </div>
-  <div class='homeMessage'>
+  <div class='home-message'>
     <h3 class='pageTitle'>{{ message }}</h3>
   </div>
 </div>

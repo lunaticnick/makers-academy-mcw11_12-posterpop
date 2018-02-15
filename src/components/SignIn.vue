@@ -4,11 +4,11 @@
     <div class="signInForm">
       <h3 id="SignInHeader">Welcome back!</h3> <br><br>
       <b-col> Email:</b-col>
-      <b-col><input type="text" v-model="email" id="email"/><br></b-col>
+      <b-col><input type="text" v-model="email" id="email"/></b-col><br>
       Password: <b-col> <input type="password" v-model="password" id="password"/><br><br> </b-col>
       <button v-on:click="signIn" id="signInButton">Login</button>
       <br><br>
-      <p class="signInForm">Oh? don't you have an account yet? <br>please create one <router-link id="signUpHyperlink" to="sign_up">here</router-link>.</p>
+      <p class="signInForm">Oh? Don't you have an account yet? <br>Please, create one <router-link id="signUpHyperlink" to="sign_up">here</router-link>.</p>
     </div>
   <!-- </b-container> -->
 

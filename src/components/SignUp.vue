@@ -1,12 +1,17 @@
 <template lang="html">
-  <div class="">
+  <div class="sign-up-form">
     <div class="signUpForm">
-      <h3 id="signUpHeader">New Account</h3>
-      Email:                 <input type="text" v-model="email" id="email">
-      Password:              <input type="password" v-model="password" id="password">
+      <h3 id="signUpHeader">New Account</h3><br><br>
+
+      <b-col>Email:</b-col>
+      <b-col><input type="text" v-model="email" id="email"></b-col><br>
+      <b-col>Password:</b-col>
+      <b-col><input type="password" v-model="password" id="password"></b-col><br><br><br>
+
     </div>
     <button v-on:click="signUp" id="signUpButton">Sign Up</button>
-    <span>or go back to <router-link id="signInHyperlink" to="/sign_in">login</router-link></span>
+
+    <span>or go back to <router-link id="signInHyperlink" to="/sign_in">Login</router-link></span>
   </div>
 
 </template>
@@ -37,23 +42,37 @@ export default {
 }
 </script>
 
-<!-- /* <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
+ <style scoped>
+ body
+ .sign-up-form{
+   font-family: 'Lato', sans-serif;
+   color: #ced4da;
+   margin-top: 3rem;
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+ }
+ #signUpHeader {
+   color: #A7D9BB;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: lighter;
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+ }
+ #signUpButton {
+   font-family: 'Cabin', sans-serif;
+   margin-bottom: 10px;
+   color: #f8f9fa;
+   background-color: #fc9a82;
+   border-color: #fc9a82;
+   background-image: none;
 
-a {
-  color: #42b983;
-}
-</style> */ -->
+   padding: 0.3rem 1rem;
+   border-radius: 50px;
+   border: solid 1px;
+
+
+ }
+ #signInHyperlink {
+   font-weight: bold;
+   color: #A7D9BB;
+ }
+
+</style>

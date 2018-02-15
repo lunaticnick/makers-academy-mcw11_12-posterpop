@@ -1,6 +1,10 @@
 <template>
   <div class="capture-photo">
 
+    <label class="capture-photo__file-btn">
+          Choose a poster
+
+
     <input
           id="chooseFile"
           type="file"
@@ -8,12 +12,14 @@
           capture="environment"
           @change="onImageCaptured($event.target.name, $event.target.files)">
 
-
+        </label>
 
 
     <div v-show="imgURL">
-      <img v-bind:src="imgURL" style="width:200px">
-      <b-button id="sendImage" v-on:click.prevent="post">Send Image</b-button>
+      <img v-bind:src="imgURL" style="width:200px" id='img-imported'>
+      <b-col>
+      <b-button id="sendImage" v-on:click.prevent="post">Pop it</b-button>
+    </b-col>
 
 
       <b-button id="extractedLinkButton" v-show="urlLink">

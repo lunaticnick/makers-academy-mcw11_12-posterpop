@@ -1,119 +1,181 @@
 #app {
-  font-family: 'arial';
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
+
 #body {
 
-
 }
-.navTitle{
+
+.nav-bar {
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+  font-size: 0.7rem;
+}
+
+.nav-title {
   font-family: 'Carter One', cursive;
   color: white;
-
+  font-size: 0.7rem;
 }
-.pageTitle{
+
+.pageTitle {
   font-family: 'Carter One', cursive;
   color: #FC9A82;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 
- .navButton {
+.home-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  border: 1px solid white;
+  vertical-align: middle;
+  margin-top: 0.5rem;
+}
+
+.nav-button {
   flex-direction: row;
- }
+}
 
- .navButton > * {
-   margin-right: 10px
- }
- .aboutUs {
-     color: #fc9a82;
-     text-decoration: none;
-     background-color: transparent;
-     -webkit-text-decoration-skip: objects;
+.nav-button>* {
+  margin-right: 10px
+}
 
- }
- .nav-link {
-   color: #A7D9BB;
+.about-us {
+  color: blue;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
 
+.nav-link {
+  color: #A7D9BB;
+}
 
- }
 #infoId {
-   color: blue;
- }
+  color: blue;
+}
 
-
- .logout {
-     color: #f8f9fa;
-     background-color: #fc9a82;
-     background-image: none;
-     border-color: #fc9a82;
- }
-
+.logout {
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.8rem;
+  color: #f8f9fa;
+  background: #A7D9BB;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  border: solid 1px;
+  border-color: #A7D9BB;
+  background-image: none;
+}
 
 /* capturePhoto.vue */
 
-/* .chooseFileButton{
+.capture-photo__file-btn {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+
+  padding: 0.3rem 1rem;
+  border-radius: 100px;
+  border: solid 1px #FBE6D9;
+  color: #fc9a82;
+  background-color: #FBE6D9;
+  background-image: none;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+
+}
+
+.capture-photo__file-btn input {
+  display: none;
+}
+#img-imported{
+  vertical-align: middle;
+}
+#sendImage{
+  margin-top: 1.5rem;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 100px;
   color: #f8f9fa;
-background-color: #fc9a82;
-background-image: none;
-border-color: #fc9a82;
-} */
+  background-color: #fc9a82;
+  border-color: #fc9a82;
+  border: solid 1px #fc9a82;
+  vertical-align: middle;
+
+
+}
+
+
+
+
+
 
 /* signIn */
+
 #SignInHeader {
   color: #A7D9BB;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
 }
+
 .signInForm {
   font-family: 'Lato', sans-serif;
-
+  color: #ced4da;
+  margin-top: 3rem;
 }
-#password {
 
+#password {}
 
-
-}
 #email {
+}
 
-}
-#bgSignIn{
-  background-color: white;
-}
+
+
 #signInButton {
+  font-family: 'Cabin', sans-serif;
   margin-bottom: 10px;
   color: #f8f9fa;
   background-color: #fc9a82;
-  background-image: none;
   border-color: #fc9a82;
-  padding: 0 60px;
+  background-image: none;
+
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  border: solid 1px;
+
 
 }
+
 #signUpHyperlink {
   font-weight: bold;
   color: #A7D9BB;
 }
+
 /* FirstPage */
+
 #fp {
   background-color: #FBE6D9;
-
 }
-#fpTitle {
 
-}
+#fpTitle {}
+
 #clickMe {
   margin-bottom: 10px;
   color: #f8f9fa;
   background-color: #fc9a82;
   background-image: none;
   border-color: #fc9a82;
-
 }
 
 /* Signup */
-#SignUpHeader {
-
-
-}
