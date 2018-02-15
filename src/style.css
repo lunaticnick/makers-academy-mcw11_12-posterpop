@@ -10,10 +10,12 @@
 #body {
 
 }
-
+.nav-title {
+  @include text-hide;
+}
 .nav-bar {
   margin-top: 4rem;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
   font-size: 0.7rem;
 }
 
@@ -38,45 +40,57 @@
   right: 0;
   left: 0;
   text-align: center;
-  border: 1px solid white;
   vertical-align: middle;
   margin-top: 0.5rem;
+}
+.tagline{
+color: #b5bdbf;
+font-family: 'Roboto', sans-serif;
+
+
 }
 
 .nav-button {
   flex-direction: row;
+  padding: 1em 0.5em;
 }
 
 .nav-button>* {
-  margin-right: 10px
+  margin-right: 10px;
+
 }
 
-.about-us {
-  color: blue;
+#infoId {
+
+  padding: 1em 0.5em;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
+/* .nav-link {
+  color: #b5bdbf;
+  padding: 1em 0.5em;
+ } */
 
-.nav-link {
-  color: #A7D9BB;
-}
 
-#infoId {
-  color: blue;
-}
 
 .logout {
   font-family: 'Cabin', sans-serif;
   font-size: 0.8rem;
   color: #f8f9fa;
   background: #A7D9BB;
-  padding: 0.3rem 1rem;
-  border-radius: 50px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 40px;
   border: solid 1px;
   border-color: #A7D9BB;
   background-image: none;
 }
+footer {
+    display: block;
+}
+
+
+
 
 /* capturePhoto.vue */
 
@@ -131,13 +145,8 @@
 
 .signInForm {
   font-family: 'Lato', sans-serif;
-  color: #ced4da;
+  color: #b5bdbf;
   margin-top: 3rem;
-}
-
-#password {}
-
-#email {
 }
 
 

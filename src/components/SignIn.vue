@@ -2,7 +2,10 @@
 
   <!-- <b-container id="singInContainer> -->
     <div class="signInForm">
-      <h3 id="SignInHeader">Welcome back!</h3> <br><br>
+      <h3 id="SignInHeader">Welcome back!</h3>
+      <a rel="home" href="/" title="posterpop"><img style="max-width:60px; vertical-align: middle;"
+           src="../../build/vide.png"></a>
+           <br><br><br>
       <b-col> Email:</b-col>
       <b-col><input type="text" v-model="email" id="email"/></b-col><br>
       Password: <b-col> <input type="password" v-model="password" id="password"/><br><br> </b-col>

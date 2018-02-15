@@ -1,7 +1,10 @@
 <template lang="html">
   <div class="sign-up-form">
     <div class="signUpForm">
-      <h3 id="signUpHeader">New Account</h3><br><br>
+      <h3 id="signUpHeader">New Account</h3>
+      <a rel="home" href="/" title="posterpop"><img style="max-width:60px; vertical-align: middle;"
+           src="../../build/vide.png"></a>
+           <br><br><br>
 
       <b-col>Email:</b-col>
       <b-col><input type="text" v-model="email" id="email"></b-col><br>
@@ -10,8 +13,9 @@
 
     </div>
     <button v-on:click="signUp" id="signUpButton">Sign Up</button>
+    <br><br>
 
-    <span>or go back to <router-link id="signInHyperlink" to="/sign_in">Login</router-link></span>
+    <p>Go back to <router-link id="signInHyperlink" to="/sign_in">Login</router-link>?</p>
   </div>
 
 </template>
@@ -46,7 +50,7 @@ export default {
  body
  .sign-up-form{
    font-family: 'Lato', sans-serif;
-   color: #ced4da;
+   color: #b5bdbf;
    margin-top: 3rem;
 
  }
