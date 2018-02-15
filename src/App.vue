@@ -6,8 +6,6 @@
 
     <router-view name="aboutUs"></router-view>
 
-    <router-view name="pageTitle"></router-view>
-
     <router-view name="capturePhoto"></router-view>
 
     <router-view name="urlList"></router-view>
@@ -15,6 +13,7 @@
     <router-view name="signUp"></router-view>
 
     <router-view name="signIn"></router-view>
+
     <router-view name="firstPage"></router-view>
 
 </div>
