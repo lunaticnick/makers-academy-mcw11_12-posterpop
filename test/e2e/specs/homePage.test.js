@@ -29,10 +29,10 @@ module.exports = {
       .end();
   },
 
-  'User is able to view the My Links link in the navigation bar': function test(browser) {
+  'User is able to view the About Usnpm  link in the navigation bar': function test(browser) {
 
     browser
-      .assert.containsText('li:nth-of-type(2)', 'My Links')
+      .assert.containsText('li:nth-of-type(2)', 'About Us')
       .end();
   },
 
