@@ -69,7 +69,7 @@ export default {
     },
 
     post() {
-      this.$http.post('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCn9ifg_YHD4PTkTHyYqq0GhreGYJGOqKA', {
+      this.$http.post(`https://vision.googleapis.com/v1/images:annotate?key=${process.env.GOOGLE_CLOUD_VISION_API_KEY}`, {
         requests: [{
           image: {
             content: this.strImage,
@@ -79,7 +79,6 @@ export default {
           }]
         }]
       }).then((dataApi) => {
-        console.log(dataApi)
         this.element = dataApi.body.responses[0].textAnnotations;
         this.element.shift();
 
@@ -93,14 +92,11 @@ export default {
     },
     addUrl(webSite) {
       this.uid = firebase.auth().currentUser.uid;
-      console.log(this.urlLink)
-      var urlData = {
-        // ts: new Date(),
-        webSite: webSite,
-        uid: this.uid
-      };
-      firebase.database().ref('events').push(urlData).then((item) => {console.log(item.key)});
-
+      // var urlData = {
+      //   webSite: webSite,
+      //   // uid: this.uid
+      // };
+      firebase.database().ref('users/'+ this.uid).push(webSite)
     },
   },
 };

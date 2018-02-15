@@ -1,17 +1,41 @@
 <template>
-  <div id="links-container">
-
-    <div class="selection list">
-      <bookmark v-for="(url, time) in bookmarks | filterByUrl query"
-        :url="capturePhoto.urlLink"
-      </bookmark>
-    </div>
-  </div>
+<div id="links-container">
+  <li class='listLinks' v-for="(value, key) in list">
+    <a name="url_from_list" id="url_list" v-bind:href='value'>{{ value }}</a>
+    <button v-on:click="removeUrl(key)" id="remove_url">Delete</button>
+  </li>
+</div>
 </template>
 
-
-
-
 <script>
+import firebase from 'firebase'
 
+export default {
+  name: 'UrlList',
+  data() {
+    return {
+      uid: firebase.auth().currentUser.uid,
+      list: ''
+    }
+  },
+  mounted() {
+    this.showUrl()
+  },
+  methods: {
+    showUrl: function() {
+      firebase.database().ref('users/' + this.uid).on('value', (snapshot) =>
+        this.list = snapshot.val());
+    },
+    removeUrl: function(key) {
+      firebase.database().ref('users/' + this.uid).on('value', (snapshot) =>
+        snapshot.forEach( function(reciptSnap) {
+          console.log(reciptSnap.ref)
+          if(reciptSnap.key === key){
+          reciptSnap.ref.remove()
+        }
+
+        })
+      )}
+    }
+  };
 </script>
