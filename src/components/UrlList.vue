@@ -2,9 +2,9 @@
   <div>
     <h3 id="urlListHeader">My Links</h3>
     <b-list-group id="links-container">
-      <li class='listLinks' v-for="(value, key) in list">
+      <li class='list-links' v-for="(value, key) in list">
         <b-list-group-item button class="links-box">
-          <a name="url_from_list" id="url_list" v-bind:href='value'>{{ value }}</a>
+          <a name="urlFromList" id="url_list" v-bind:href='value'>{{ value }}</a>
           <button v-on:click="removeUrl(key)" id="remove_url">Delete</button>
         </b-list-group-item>
 
