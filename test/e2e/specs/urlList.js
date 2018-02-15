@@ -42,6 +42,23 @@ module.exports = {
   //   .click('#remove_url')
   //   .assert.containsText('.listLinks', 'http://NOSALIVE.COM')
   //   .end();
+// },
+
+'Check that the url link is not shown in the list': function test(browser) {
+  const devServer = browser.globals.devServerURL;
+
+browser
+  .url(devServer)
+  .waitForElementVisible('#app', 5000)
+  .setValue('input[type="text"]', 'example@test.com')
+  .setValue('input[type="password"]', '123456')
+  .click('#signInButton')
+  .waitForElementVisible('#my_links', 5000)
+  .click('#my_links')
+  .waitForElementVisible('#links-container', 5000)
+  // .click('#remove_url')
+  .assert.containsText('.listLinks', 'Delete')
+  .end();
 },
 
 }
