@@ -25,7 +25,7 @@ module.exports = {
     browser
       .click("#sendImage")
       .waitForElementVisible('button[id="extractedLinkButton"]', 10000)
-      .assert.elementPresent('a[name="linkExtraction"]')
+      .assert.elementPresent('a[name="link-extraction"]')
       .assert.containsText('#extractedLink', 'http://NOSALIVE.COM')
       .end();
   },
@@ -35,7 +35,7 @@ module.exports = {
     browser
       .click("#sendImage")
       .waitForElementVisible('button[id="extractedLinkButton"]', 10000)
-      .click('a[name="linkExtraction"]')
+      .click('a[name="link-extraction"]')
       .assert.urlEquals('http://nosalive.com/')
     .end();
   },

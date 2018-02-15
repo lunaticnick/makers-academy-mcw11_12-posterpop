@@ -1,25 +1,22 @@
 <template>
-<div>
-  <div class='home'>
-
-    <b-nav class="nav-bar"><b-nav-item class='nav-title' to="/home">
-    <a rel="home" href="/" title="posterpop"><img style="max-width:60px; vertical-align: middle;"
-         src="../../build/logo2.png"></a> </b-nav-item>
-
-
-      <b-navbar-nav class="ml-auto nav-button">
-        <b-nav-item  to="/my_links" id="myLinks">{{ links }}</b-nav-item>
-        <b-nav-item  to="/about_us" id="infoId">{{ info }}</b-nav-item>
-        <b-button v-on:click="signOut" id="logOutButton" variant="outline-primary logout">Log Out</b-button>
-      </b-navbar-nav>
-
-
-    </b-nav>
-  </div>
-  <div class='home-message'>
-    <a rel="home" href="/" title="posterpop">
-    <h3 class='pageTitle'>{{ message }}</h3>
-    </a>
+  <div>
+    <div class='home'>
+      <b-nav class="nav-bar">
+        <b-nav-item class='nav-title' to="/home">
+          <a rel="home" href="/" title="posterpop"><img style="max-width:60px; vertical-align: middle;"
+             src="../../build/logo2.png"></a> </b-nav-item>
+        <b-navbar-nav class="ml-auto nav-button">
+          <b-nav-item to="/my_links" id="myLinks">{{ links }}</b-nav-item>
+          <b-nav-item to="/about_us" id="infoId">{{ info }}</b-nav-item>
+          <b-button v-on:click="signOut" id="logOutButton" variant="outline-primary logout">Log Out</b-button>
+        </b-navbar-nav>
+      </b-nav>
+    </div>
+    <div class='home-message'>
+      <a rel="home" href="/" title="posterpop">
+        <h3 class='page-title'>{{ message }}</h3>
+      </a>
+    </div>
   </div>
 </template>
 
