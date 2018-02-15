@@ -4,7 +4,7 @@
 
 *__"Schedule your cultural life with a single snap"__*
 
-Try __posterpop!__ for yourself [here](https://posterpopapp.firebaseapp.com).
+Try __posterpop!__ for yourself [here](https://posterpop-app.firebaseapp.com).
 
 <!-- adding video recording here -->
 
