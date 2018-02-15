@@ -4,6 +4,7 @@ import BootstrapVue from 'bootstrap-vue';
 import App from './App';
 import router from './router';
 import firebase from 'firebase';
+import * as admin from 'firebase-admin';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import scriptURL from 'sw-loader!../sw.js';
@@ -12,6 +13,13 @@ navigator.serviceWorker.register(scriptURL).then(console.log("sw successfully re
 
 Vue.use(VueResource);
 Vue.use(BootstrapVue);
+
+var serviceAccount = require('/Users/EW/Downloads/meventoapp-firebase-adminsdk-qr2v9-6c7b73ede0.json');
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://meventoapp.firebaseio.com'
+});
 
 Vue.config.productionTip = false;
 let app;
@@ -25,6 +33,7 @@ let config = {
 };
 
 firebase.initializeApp(config);
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (!app) {
     /* eslint-disable no-new */
