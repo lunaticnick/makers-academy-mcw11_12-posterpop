@@ -176,7 +176,8 @@ I want the app to recommend alternative dates or locations.
 ```
 
 ## Diagrams
-<!-- Add diagrams here -->
+
+![MVC diagram in Vue.js](MVC-Diagram.png "MVC diagram in Vue.js")
 
 ## Authors
 

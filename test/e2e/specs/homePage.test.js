@@ -13,9 +13,11 @@ module.exports = {
   },
 
   'User is redirected to home page after Sign In': function test(browser) {
+    const devServer = browser.globals.devServerURL;
 
     browser
-      .assert.containsText('.homeMessage', 'Welcome to posterpop!')
+
+      .assert.urlEquals(devServer + '/#/home')
       .end();
   },
 
@@ -23,14 +25,14 @@ module.exports = {
 
     browser
       .assert.elementPresent('.home')
-      .assert.containsText('.nav-item', 'posterpop!')
+      .assert.containsText('.home-message', 'posterpop!')
       .end();
   },
 
-  'User is able to view the About Us link in the navigation bar': function test(browser) {
+  'User is able to view the My Links link in the navigation bar': function test(browser) {
 
     browser
-      .assert.containsText('li:nth-of-type(2)', 'About Us')
+      .assert.containsText('li:nth-of-type(2)', 'My Links')
       .end();
   },
 
@@ -44,11 +46,11 @@ module.exports = {
       .end();
   },
 
-  'User redirects to home page after clicking posterpop in navigation bar': function test(browser) {
+  'User redirects to home page after clicking posterpop logo in navigation bar': function test(browser) {
     const devServer = browser.globals.devServerURL;
 
     browser
-      .click("#homePage")
+      .click(".nav-link")
       .assert.urlEquals(devServer + '/#/home')
       .end();
   },
@@ -65,7 +67,7 @@ module.exports = {
 
     browser
       .assert.elementPresent('.capture-photo')
-      .verify.visible('input[id="chooseFile"]', 'choose file inputbox')
+      .verify.containsText('.capture-photo__file-btn', 'Snap your poster')
       .end();
   },
 };
