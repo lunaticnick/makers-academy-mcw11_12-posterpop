@@ -7,12 +7,15 @@
 Try __posterpop!__ for yourself [here](https://posterpop-app.firebaseapp.com).
 
 Sign up:
+
 ![Sign up](https://media.giphy.com/media/1g36Bw0W1YnVXdioTb/giphy.gif)
 
 Take a photo of an event poster:
+
 ![Take a photo](https://media.giphy.com/media/YUHIXsEcY667p3YpId/giphy.gif)
 
 View the links you've visited:
+
 ![View the links](https://media.giphy.com/media/2vs3p1LbDsTdKkaTeK/giphy.gif)
 
 How often have you seen the poster of an event/exhibition on the street/tube, taken a picture of it thinking "I'd love to go there/do this!" and forgotten all about the event?
