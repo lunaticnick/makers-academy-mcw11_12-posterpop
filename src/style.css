@@ -8,6 +8,7 @@
 }
 
 #body {
+  background-color: #fffcf7;
 
 }
 .nav-title {
@@ -15,8 +16,8 @@
 }
 .nav-bar {
   margin-top: 4rem;
-  margin-bottom: 6rem;
-  font-size: 0.7rem;
+  margin-bottom: 2.4rem;
+  font-size: 0.8rem;
 }
 
 .nav-title {
@@ -42,6 +43,7 @@
   text-align: center;
   vertical-align: middle;
   margin-top: 0.5rem;
+
 }
 .tagline{
 color: #b5bdbf;
@@ -61,8 +63,8 @@ font-family: 'Roboto', sans-serif;
 }
 
 #infoId {
-
-  padding: 1em 0.5em;
+  margin-bottom: 1em;
+  padding: 0.5em 0.5em;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -78,6 +80,8 @@ font-family: 'Roboto', sans-serif;
   font-family: 'Cabin', sans-serif;
   font-size: 0.8rem;
   color: #f8f9fa;
+  height: 50%;
+  margin-top: 0.7em;
   background: #A7D9BB;
   padding: 0.3rem 0.8rem;
   border-radius: 40px;
@@ -90,7 +94,15 @@ footer {
 }
 
 
+#myLinks {
+  color: #b5bdbf;
+  margin-bottom: 1em;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
 
+}
 
 /* capturePhoto.vue */
 
@@ -104,7 +116,7 @@ footer {
   color: #fc9a82;
   background-color: #FBE6D9;
   background-image: none;
-  margin-top: 1rem;
+  margin-top: -5rem;
   margin-bottom: 1.5rem;
 
 }
@@ -130,6 +142,26 @@ footer {
 
 }
 
+#extractedLinkButton{
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+
+  /* padding: 0.3rem 0.2rem; */
+  border-radius: 5px;
+  border: solid 1px #e8ede8;
+  color: #fc9a82;
+  height: 50%;
+  margin-top: 20em;
+  background-color: #fffefc;
+  background-image: none;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+
+}
+#extractedLink {
+  color: #ddd8d0;
+
+}
 
 
 
@@ -187,4 +219,42 @@ footer {
   border-color: #fc9a82;
 }
 
-/* Signup */
+/* UrlList */
+
+#urlListHeader {
+  margin-bottom: 4rem;
+  color: #A7D9BB;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+.links-box {
+   /* background-color: #fffefc; */
+}
+
+.listLinks {
+  list-style: none;
+
+}
+#remove_url {
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: solid 1px #e8ede8;
+  color: #b5bdbf;
+  background-color: #e8ede8;
+  background-image: none;
+  /* margin-left: 3rem; */
+  /* height: 1.5rem; */
+  text-align: margin-right;
+  flex-direction: inline-block;
+  /* padding: 0.2rem 0.3rem; */
+}
+#url_list {
+  color: #b5bdbf;
+
+  /* margin-right: 7rem; */
+}
+.list-group-item {
+    padding: 0.5rem 2rem;
+
+}
