@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "meventoapp"
+    "production": "posterpop-app",
+    "test": "meventoapp",
+    "default": "posterpop-app"
   }
 }

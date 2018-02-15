@@ -6,7 +6,7 @@
   "display": "minimal-ui",
   "orientation": "portrait",
   "Scope": "/",
-  "start_url": "https://posterpopapp.firebaseapp.com/",
+  "start_url": "https://posterpop-app.firebaseapp.com/",
   "icons": [
     {
       "src": "images/icons/icon-36x36.png",
