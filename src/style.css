@@ -143,7 +143,6 @@ font-family: 'Roboto', sans-serif;
 #extractedLinkButton{
   font-family: 'Cabin', sans-serif;
   font-size: 1rem;
-  /* padding: 0.3rem 0.2rem; */
   border-radius: 5px;
   border: solid 1px #e8ede8;
   color: #fc9a82;
@@ -209,7 +208,16 @@ font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: #A7D9BB;
 }
+.tagline {
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+font-family: 'Cabin', sans-serif;
 
+
+
+}
 
 
 /* UrlList */
@@ -279,4 +287,5 @@ font-family: 'Roboto', sans-serif;
 .aboutUsBox {
   background-color: #fffefc;
   margin-bottom: -2rem;
+
 }
