@@ -4,7 +4,7 @@
     <div class="signInForm">
       <h3 id="SignInHeader">Welcome back!</h3>
       <a rel="home" href="/" title="posterpop"><img style="max-width:60px; vertical-align: middle;"
-           src="../../build/vide.png"></a>
+           src="../../build/logo2.png"></a>
            <br><br><br>
       <b-col> Email:</b-col>
       <b-col><input type="text" v-model="email" id="email"/></b-col><br>
