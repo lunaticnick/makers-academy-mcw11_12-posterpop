@@ -15,6 +15,8 @@ module.exports = {
   },
 
   'Navigates to the links page for the current user': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+
     browser
       .assert.urlEquals(devServer + '/#/my_links')
       .end();
