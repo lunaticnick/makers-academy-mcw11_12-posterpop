@@ -79,7 +79,7 @@ So I can use the features of the app,
 I want to be able to take a photo of a poster.
 ```
 
-#### IMPLEMENTED FEATURES
+#### Implemented Features
 
 ```
 As a User,
