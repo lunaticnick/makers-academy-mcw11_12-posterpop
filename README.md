@@ -129,7 +129,7 @@ So that I can remove events that I am no longer interested in,
 I want to be able to delete links.
 ```
 
-##### Extra Features
+#### Extra Features
 Additional features not yet implemented are listed below.
 
 ```
