@@ -31,7 +31,7 @@ posterpop! is an app that uses text recognition to allow the user to photograph 
 :wrench: [EsLint AirBnB](https://www.npmjs.com/package/eslint-config-airbnb)  
 :wrench: [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
-## Setup
+<!-- ## Setup -->
 
 <!-- Check the whole API/FIREBASE key issue -->
 <!--
@@ -66,7 +66,7 @@ $ npm test
 We have been documenting our journey on [Medium](https://medium.com/@team_processive/).
 
 ## User Stories
-MVP
+#### MVP
 
 ```
 As a User,
@@ -74,7 +74,7 @@ So I can use the features of the app,
 I want to be able to take a photo of a poster.
 ```
 
-IMPLEMENTED FEATURES
+#### IMPLEMENTED FEATURES
 
 ```
 As a User,
@@ -124,7 +124,7 @@ So that I can remove events that I am no longer interested in,
 I want to be able to delete links.
 ```
 
-## Extra Features
+##### Extra Features
 Additional features not yet implemented are listed below.
 
 ```
