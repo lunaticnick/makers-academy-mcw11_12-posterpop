@@ -6,13 +6,16 @@
 
 Try __posterpop!__ for yourself [here](https://posterpop-app.firebaseapp.com).
 
-<!-- adding video recording here -->
+Or view a demo [here](https://www.youtube.com/watch?v=9GgNUaxrOFU).
+
+![screenshot](Screenshot.png "Screenshot of the homepage")
 
 How often have you seen the poster of an event/exhibition on the street/tube, taken a picture of it thinking "I'd love to go there/do this!" and forgotten all about the event?
 
 posterpop! is an app that uses text recognition to allow the user to photograph that poster and save the link for the event's website. That link is then stored in the user's profile and is shown on the app page. The user can then click on it to get redirected to the event's website at a later time.
 
 ## Tech Stack
+
 - Front-End  
 :iphone: [JavaScript ES6](https://www.javascript.com/)  
 :iphone: [Vue 2](https://vuejs.org/)  
@@ -31,38 +34,40 @@ posterpop! is an app that uses text recognition to allow the user to photograph 
 :wrench: [EsLint AirBnB](https://www.npmjs.com/package/eslint-config-airbnb)  
 :wrench: [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
-<!-- ## Setup -->
+## Setup
 
-<!-- Check the whole API/FIREBASE key issue -->
-<!--
-1. Check if you have Node.js installed on your computer by running the command below
+1. Create a [Google Cloud Platform account](https://cloud.google.com/vision/) and create a project. Link the project to your [Firebase console](https://console.firebase.google.com/u/0/). Instructions for how to link the project to Firebase can be found [here](https://firebase.google.com/docs/web/setup).
+
+2. Check if you have Node.js installed on your computer by running the command below
 ```
 $ node -v
 ```
 If you don't have it, install Node.js directly from the [node.js.org](https://nodejs.org/en/download/) website.
 
-2. Clone the repo to your computer
+3. Clone the repo to your computer
 ```
 $ git clone https://github.com/ker-an/posterpop.git
 ```
 
-3. Install the node dependencies by running
+4. Install the node dependencies by running
 ```
 $ npm install
 ```
 
-4. Run the server
+5. Run the server
 ```
 $ npm run dev
 ```
 
 ## Testing Framework
+
 To check our tests, run the command below:
 ```
 $ npm test
-``` -->
+```
 
 ## Our Blog
+
 We have been documenting our journey on [Medium](https://medium.com/@team_processive/).
 
 ## User Stories
@@ -189,4 +194,5 @@ I want the app to recommend alternative dates or locations.
 [Eleanor Wintram](https://github.com/ewintram)
 
 ## License
+
 MIT
