@@ -1,5 +1,5 @@
 ![USEDPOST](https://img.shields.io/badge/USES-Javascript-blue.svg?style=for-the-badge)
-![USEDPOST](https://img.shields.io/badge/USES-Vue 2.svg?style=for-the-badge)
+![USEDPOST](https://img.shields.io/badge/USES-Vue_2.svg?style=for-the-badge)
 ![USEDPOST](https://img.shields.io/badge/USES-Node-green.svg?style=for-the-badge)
 ![USEDPOST](https://img.shields.io/badge/USES-Google_Cloud_Vision_API+FireBase-blue.svg?style=for-the-badge)
 
@@ -188,6 +188,10 @@ I want the app to recommend alternative dates or locations.
 ## Diagrams
 
 ![MVC diagram in Vue.js](MVC-Diagram.png "MVC diagram in Vue.js")
+
+## To Do
+- Unit Testing
+- Complete/Implement extra Features
 
 ## Authors
 
