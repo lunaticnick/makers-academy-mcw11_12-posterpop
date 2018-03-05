@@ -1,5 +1,5 @@
 ![USEDPOST](https://img.shields.io/badge/USES-Javascript-blue.svg?style=for-the-badge)
-![USEDPOST](https://img.shields.io/badge/USES-Vue_2.svg?style=for-the-badge)
+![USEDPOST](https://img.shields.io/badge/USES-Vue2-yellow.svg?style=for-the-badge)
 ![USEDPOST](https://img.shields.io/badge/USES-Node-green.svg?style=for-the-badge)
 ![USEDPOST](https://img.shields.io/badge/USES-Google_Cloud_Vision_API+FireBase-blue.svg?style=for-the-badge)
 
