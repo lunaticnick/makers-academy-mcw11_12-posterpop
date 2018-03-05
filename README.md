@@ -1,3 +1,6 @@
+![USEDPOST](https://img.shields.io/badge/USES-Javascript-blue.svg?style=for-the-badge)
+![USEDPOST](https://img.shields.io/badge/USES-Vue_2.js.svg?style=for-the-badge)
+
 # posterpop!
 
 [Tech Stack](#tech-stack) | [Setup](#setup) | [Testing Framework](#testing-framework) | [Our Blog](#our-blog) | [User Stories](#user-stories) | [Extra Features](#extra-features) | [Diagrams](#diagrams) | [Authors](#authors)
